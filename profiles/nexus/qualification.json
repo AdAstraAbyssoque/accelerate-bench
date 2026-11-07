@@ -88,8 +88,8 @@
     },
     {
       "task_id": "io500-file-io",
-      "class": "runtime_MPI_Bcast_after_Init",
-      "minimal_action": "Review exact installed OpenMPI4.1.4 interface enumeration and standard if=posix_ipv4 control as a bounded diagnostic; require actual effective MCA source/interface order and full Init+Bcast payload before a whole-judge canary.",
+      "class": "runtime_reference_process_trace_contract",
+      "minimal_action": "Retain native routing. The bounded OpenMPI/IPv4 and wait4-restart compatibility trial reached a successful reference process exit, but the unchanged trace observer rejected an unknown process before candidate application execution. The full private/public chain is unqualified; require trace-contract-compatible execution and full reference/candidate validation before any new Cloud cohort.",
       "resource_increase_is_fix": false
     },
     {

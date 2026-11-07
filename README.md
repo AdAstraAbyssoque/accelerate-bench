@@ -78,6 +78,16 @@ python tools/scan_canaries.py --manifest canaries.json /path/to/corpus.jsonl
 
 Markers support contamination detection; they do not prevent copying. A hit shows text presence, not proof of training or cheating, and absence is not proof of no leakage. Markers are additional release files and do not modify the frozen task instructions, judges or scoring.
 
+## Development checks
+
+The release-tooling CI checks archive validation, installation behavior and the 33 distributed canary markers on Python 3.12 and 3.13. It runs without dataset access or model credentials. Run the downloader checks locally with:
+
+```sh
+python -m unittest discover -s tests -p test_download_data.py -v
+```
+
+After downloading and hydrating the task assets, the configuration-tool tests can also run with `python -m unittest discover -s tests -p test_tools.py -v`. These tooling checks do not run the benchmark or validate model scores.
+
 ## Licenses and contact
 
 Author-owned project code and tools use [Apache-2.0](LICENSE). Task components retain their upstream terms; see [component licensing](public-release/LICENSING.md) and [third-party resolutions](public-release/THIRD-PARTY-RESOLUTIONS.json). Download access commitments do not replace those licenses. The paper uses CC BY 4.0.

@@ -1,0 +1,52 @@
+name: Release tooling
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  tooling:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ['3.12', '3.13']
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check archive validation and installation
+        run: python3 -m unittest discover -s tests -p test_download_data.py -v
+      - name: Check downloader command
+        run: python3 scripts/download_data.py --help
+      - name: Check release and task canaries
+        shell: bash
+        run: |
+          python3 tools/scan_canaries.py --manifest canaries.json CONTAMINATION_NOTICE.md contamination/tasks/*.md > /tmp/canary-scan.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          manifest = json.loads(Path('canaries.json').read_text())
+          result = json.loads(Path('/tmp/canary-scan.json').read_text())
+          expected = {manifest['release_marker']} | {row['marker'] for row in manifest['tasks']}
+          found = {hit['marker'] for row in result['files'] for hit in row['matches']}
+          assert not result['errors']
+          assert found == expected and len(found) == 33
+          assert len(result['files']) == 33
+          by_file = {row['file']: {hit['marker'] for hit in row['matches']} for row in result['files']}
+          assert manifest['release_marker'] in by_file['CONTAMINATION_NOTICE.md']
+          for task in manifest['tasks']:
+              assert task['marker'] in by_file['contamination/tasks/' + task['task_id'] + '.md']
+          print('All 33 release/task markers are present in their distributed notices.')
+          PY

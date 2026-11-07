@@ -1,0 +1,8 @@
+{
+  "schema": "acceleratebench.profile-lock.v1",
+  "files": {
+    "profiles/nexus/tasks.json": "702fc1a706a48f51929319d9d7a0fe8c4cc1dfbd9fdbeb3b88375741da0d3811",
+    "profiles/native/profile.json": "cb323409f4639b93689cf3c16307e0c7b0c831f8c0db6647cbd463c20f99a187"
+  },
+  "rule": "A reviewed change requires a new profile/version and lock; do not change canonical scientific files through profiles."
+}

@@ -1,0 +1,109 @@
+{
+  "schema": "acceleratebench.nexus-qualification-scope.v1",
+  "historical_cloud_route_21": [
+    "abyss-genome-assembly",
+    "datalife-io-monitoring",
+    "fegrass-graph-sparsification",
+    "fluidity-heat-checkpoint",
+    "gromacs-molecular-dynamics",
+    "hpcg-multigrid-pcg",
+    "lammps-molecular-dynamics",
+    "mrbayes-phylogenetics",
+    "nufft-imaging",
+    "openfoam-cavity-piso",
+    "paged-lm-generation",
+    "palabos-lattice-boltzmann",
+    "presto-pulsar-search",
+    "qe-scf-nscf-dos",
+    "qibotn-tensor-network-circuits",
+    "quest-circuit-simulation",
+    "siesta-dft-restart",
+    "su2-transonic-euler",
+    "thundersvm-train-predict",
+    "tucker-reconstruction",
+    "wtdbg2-long-read-assembly"
+  ],
+  "historical_native_route_11": [
+    "gpaw-fd-dft-restart",
+    "hpl-dense-lu",
+    "icon-atmosphere-checkpoint",
+    "io500-file-io",
+    "mhm2-metagenome-assembly",
+    "minivite-louvain",
+    "mpas-atmosphere-restart",
+    "nemo-lock-exchange",
+    "openmc-multigroup-transport",
+    "shengbte-phonon-transport",
+    "vpic-harris-reconnection"
+  ],
+  "execution_ready_for_any_new_tuple": false,
+  "blocked_11": [
+    {
+      "task_id": "gpaw-fd-dft-restart",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "hpl-dense-lu",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "minivite-louvain",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "mpas-atmosphere-restart",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "nemo-lock-exchange",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "openmc-multigroup-transport",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "shengbte-phonon-transport",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "vpic-harris-reconnection",
+      "class": "runtime_MPI_PMIX_reference_initialization",
+      "minimal_action": "Preserve original image/libmpi/PMIx version and original no-network/UID command; qualify Init+Bcast and then one complete original-candidate verifier under a separately recorded compatible backend/profile.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "io500-file-io",
+      "class": "runtime_MPI_Bcast_after_Init",
+      "minimal_action": "Review exact installed OpenMPI4.1.4 interface enumeration and standard if=posix_ipv4 control as a bounded diagnostic; require actual effective MCA source/interface order and full Init+Bcast payload before a whole-judge canary.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "mhm2-metagenome-assembly",
+      "class": "runtime_procfs_parser_plus_distinct_reference_adapter_defect",
+      "minimal_action": "Keep runtime/procfs and task-source fixes separate. Select a backend with truthful procfs/affinity semantics or review a bounded parser fallback; version the SAM adapter source separately and retain identical main/public/private source plus full public/private acceptance.",
+      "resource_increase_is_fix": false
+    },
+    {
+      "task_id": "icon-atmosphere-checkpoint",
+      "class": "private_runtime_configuration_missing_image",
+      "minimal_action": "Bind exact private Dockerfile/build context/image to provider settings, preserve original candidate and resources. Qualify original private MPI command on the chosen backend before whole verifier.",
+      "resource_increase_is_fix": false
+    }
+  ],
+  "no_automatic_fallback_or_retry": true
+}

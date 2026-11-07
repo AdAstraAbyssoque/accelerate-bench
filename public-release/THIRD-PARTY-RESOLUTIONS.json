@@ -1,0 +1,171 @@
+{
+  "schema": "acceleratebench.license-scope-resolutions.v1",
+  "source_files_modified": false,
+  "resolutions": [
+    {
+      "task": "icon-atmosphere-checkpoint",
+      "archive_sha256": "0919364214e5cf15de83ca921b2032225f865f23a45026ee073ef8acb6fba468",
+      "previous_finding": "Filename-only audit did not recognize LICENSES/*.txt or REUSE annotations.",
+      "resolution": "Root README states BSD-3-Clause for ICON; root LICENSES/ contains 12 notices and REUSE.toml assigns file-category exceptions. Missing root grant is not an accurate description of this archive. Preserve all original notices and annotations, rather than relabeling the archive Apache-2.0.",
+      "root_license_directory_files": 12,
+      "evidence": [
+        {
+          "member": "icon/README.md",
+          "sha256": "f06112ffff9763aaa96d8fec5084383df4b11fbc083ba739eaef5c264ad9f3a4",
+          "bytes": 1908
+        },
+        {
+          "member": "icon/REUSE.toml",
+          "sha256": "7d34b75551f6b7a6d28d9defb4d150cf9d70acff648dfe0c41e11aec384825fc",
+          "bytes": 3156
+        },
+        {
+          "member": "icon/AUTHORS.TXT",
+          "sha256": "0505e28628bc6c4a10a7686845ba3138a38e0b56f67df9c6e91cdcf285d13f81",
+          "bytes": 3881
+        },
+        {
+          "member": "icon/LICENSES/CC-BY-4.0.txt",
+          "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744",
+          "bytes": 17023
+        },
+        {
+          "member": "icon/LICENSES/FSFUL.txt",
+          "sha256": "a5e99f55b10212abd954f092b65ef5d4cf4047071fe20be307406a148a342c35",
+          "bytes": 198
+        },
+        {
+          "member": "icon/LICENSES/Apache-2.0.txt",
+          "sha256": "074e6e32c86a4c0ef8b3ed25b721ca23aca83df277cd88106ef7177c354615ff",
+          "bytes": 10280
+        },
+        {
+          "member": "icon/LICENSES/Autoconf-exception-generic-3.0.txt",
+          "sha256": "52d0836d9f63223dae5b6a680af6d12abc8bf15ebf5b44db8a14b7362afe993d",
+          "bytes": 387
+        },
+        {
+          "member": "icon/LICENSES/LPPL-1.0.txt",
+          "sha256": "7790736e17a15a9e30f8adaacb3951c7b3a9e102c2cf48b9ac9a51bdf26297a0",
+          "bytes": 8929
+        },
+        {
+          "member": "icon/LICENSES/CC0-1.0.txt",
+          "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+          "bytes": 7048
+        },
+        {
+          "member": "icon/LICENSES/FSFAP.txt",
+          "sha256": "99cb91dacd5714a701749ec47239015726beec5fc86a5c94a4873778824b16d7",
+          "bytes": 225
+        },
+        {
+          "member": "icon/LICENSES/BSD-3-Clause.txt",
+          "sha256": "5a93d5831e1297ab10fe643e1a631e83be392896da14ee2951285a79012df69d",
+          "bytes": 1460
+        },
+        {
+          "member": "icon/LICENSES/MIT.txt",
+          "sha256": "b85dcd3e453d05982552c52b5fc9e0bdd6d23c6f8e844b984a88af32570b0cc0",
+          "bytes": 1078
+        },
+        {
+          "member": "icon/LICENSES/GPL-3.0-or-later.txt",
+          "sha256": "fb981668c18a279e285fc4d83fba1e836cc84dd4daa73c9697d3cfd2d8aca6e0",
+          "bytes": 34674
+        },
+        {
+          "member": "icon/LICENSES/X11-distribute-modifications-variant.txt",
+          "sha256": "472a5d3bfe4ba4289fbe4d3ff016be25ad4af4c6d7ea523d443139b56d214130",
+          "bytes": 1314
+        },
+        {
+          "member": "icon/LICENSES/LicenseRef-ACM.txt",
+          "sha256": "5134703db215821de6b4b44286ebe84267c5421ac710783f207f1203f722191c",
+          "bytes": 3718
+        }
+      ],
+      "remaining_scope": "Mixed external components and listed documentation/data exceptions retain their own terms; no new author decision is needed merely because a file is not named LICENSE."
+    },
+    {
+      "task": "nufft-imaging",
+      "archive_sha256": "a9377463a39a369b83a16ffcd6a441a59a4ad07c6166cd33c7fe546ea4e2b7da",
+      "previous_finding": "No archive-root license notice was found.",
+      "resolution": "The archive is a benchmark wrapper plus three independently bundled upstream trees, not a single unidentified upstream project.",
+      "bundled_file_counts": {
+        "finufft": 578,
+        "xsimd": 234,
+        "xtl": 96,
+        "src": 1,
+        "include": 1,
+        "reconstruct.cpp": 1,
+        "build_application.sh": 1
+      },
+      "upstream_notice_evidence": [
+        {
+          "member": "nufft/finufft/LICENSE",
+          "sha256": "36e81aa53175093663f8b5fe15eb4e090a4abcf9b7e96515549bfca233590a87",
+          "bytes": 1815
+        },
+        {
+          "member": "nufft/finufft/fortran/cmcl_license.txt",
+          "sha256": "4e5ef7caa2e4adeb669ae4e9aeb6da3b92365535a09a9686337e58c3a89123e2",
+          "bytes": 1746
+        },
+        {
+          "member": "nufft/xsimd/LICENSE",
+          "sha256": "501352acba62cc54e8e3d293754d606f919c9b425b962193c211f9fa29cd9940",
+          "bytes": 1606
+        },
+        {
+          "member": "nufft/xtl/LICENSE",
+          "sha256": "b5ab7b1d364112a59b717b622f7914a9d545de1fa62febf22f50e728a241a487",
+          "bytes": 1580
+        }
+      ],
+      "remaining_scope": "No repeated author-license question. Preserve upstream notices; project Apache-2.0 scope applies only to these four benchmark integration files and does not alter canonical archive bytes.",
+      "first_party_wrapper_files": [
+        "nufft/src/nufft_preprocess.cpp",
+        "nufft/include/nufft_preprocess.h",
+        "nufft/reconstruct.cpp",
+        "nufft/build_application.sh"
+      ],
+      "classification": "first_party_benchmark_integration",
+      "authorization": "Existing author instruction licenses author-owned benchmark code under Apache-2.0.",
+      "ownership_basis": "The four non-vendor files implement the benchmark-specific reconstruction executable, preprocessing interface/implementation, and build_application.sh. All bundled upstream code is separately rooted under finufft/, xsimd/, xtl/ with its own notices; no vendor subtree is reclassified. Ownership is inferred from this integration boundary and the existing author authorization, not from absence of LICENSE.",
+      "first_party_wrapper_evidence": [
+        {
+          "member": "nufft/src/nufft_preprocess.cpp",
+          "sha256": "1fa833ca58284667f8d79763ee5b3ab4de93446effe557472311af076eee81f4"
+        },
+        {
+          "member": "nufft/include/nufft_preprocess.h",
+          "sha256": "c6c9e4bcf445444e4f33c1b61d83da4478a998d19f394ff7f6a176175c9adc25"
+        },
+        {
+          "member": "nufft/reconstruct.cpp",
+          "sha256": "b5d2640d20e0bdfc8a0c2f6a95968870b73f3d4aef34bcbad1517e37ee942453"
+        },
+        {
+          "member": "nufft/build_application.sh",
+          "sha256": "c4f7e324375cae794a979fe2654234a5e96b85debb0ddc3634c30137d9c7d60a"
+        }
+      ]
+    },
+    {
+      "task": "abyss-genome-assembly",
+      "classification": "separately_licensed_dependency_noncommercial_terms",
+      "distribution_assessment": "The supplied notice expressly permits use, redistribution and modification for non-commercial purposes under its stated GPL-derived terms. Noncommercial does not mean no public redistribution. Preserve this notice and complete accompanying GPL text; do not describe ABySS as Apache-2.0 or grant commercial rights.",
+      "source_notice": "abyss-genome-assembly/environment/workspace/abyss/LICENSE",
+      "source_notice_sha256": "1ef55a8bb5eadc8cc564f2fd8405ea662710a79b424f3e70dda499bef4d7f9ee",
+      "exact_scope_prefixes": [
+        "abyss-genome-assembly/environment/workspace/abyss/",
+        "abyss-genome-assembly/environment/public-judge/reference-source/",
+        "abyss-genome-assembly/tests/reference/source/"
+      ],
+      "nested_notice_note": "Nested gtest code retains BSD-3-Clause; parent scope annotation does not relicense it.",
+      "author_action_required_for_noncommercial_distribution_under_existing_terms": false,
+      "commercial_permission_inferred": false
+    }
+  ]
+}

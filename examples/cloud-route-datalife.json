@@ -1,0 +1,211 @@
+{
+  "backend_qualification_scope": {
+    "historical_route": "Cloud",
+    "blocking_class": null,
+    "new_tuple_qualification_required": true
+  },
+  "schema": "acceleratebench.execution-descriptor.v1",
+  "identity": {
+    "model_id": "example-model",
+    "wire_model": "example-model",
+    "protocol": "openai_chat",
+    "task_id": "datalife-io-monitoring",
+    "task_source_sha256": "96e7f9b83660c5110ed34101d5f52455a6800e3503e7703bebcfcaabdbdc41c4",
+    "environment_profile_sha256": "9f7fd2548547fd939b5922362879ce6c16d08bc4a13062a43950810fd0c0b24a",
+    "backend": "nexus"
+  },
+  "dedup_key": "7f6513c1957d4158b9d230ee410c048a889e508d7fd8c6af0fd309466d69f2de",
+  "canonical_contract": {
+    "task_id": "datalife-io-monitoring",
+    "task_version": "1.1.0",
+    "source_version": "20261010-v5-timing3",
+    "source_sha256": "96e7f9b83660c5110ed34101d5f52455a6800e3503e7703bebcfcaabdbdc41c4",
+    "agent_timeout_sec": 28800,
+    "verifier_timeout_sec": 14000,
+    "main": {
+      "workdir": "/app",
+      "cpus": 4,
+      "memory_mb": 6144,
+      "network_mode": "public",
+      "build_timeout_sec": 3600
+    },
+    "private": {
+      "network_mode": "no-network",
+      "build_timeout_sec": 3600,
+      "cpus": 4,
+      "memory_mb": 6144
+    },
+    "public": {
+      "cpus": 4,
+      "mem_limit": "6144m"
+    },
+    "canonical_file_count": 76
+  },
+  "environment_profile": {
+    "outer_resources": {
+      "main": {
+        "cpu": 4,
+        "memory": 14
+      },
+      "verifier": {
+        "cpu": 4,
+        "memory": 8
+      }
+    },
+    "shared_main_public_cpu_budget": true,
+    "runner_timeout_sec": 57600,
+    "agent_timeout_sec": 28800,
+    "verifier_timeout_sec": 14000,
+    "timeout_multiplier": 1,
+    "images": {
+      "runtime_worker_overlay": {
+        "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+      },
+      "controller_base": {
+        "environment_variable": "AB_NEXUS_BASE_IMAGE"
+      }
+    },
+    "qualification": "requires_exact_source_image_backend_full_chain",
+    "compatibility_profile": "none",
+    "inner_hard_limits_proven": false
+  },
+  "environment_profile_id": "nexus-canonical-outer-budget-v1",
+  "provider_environment": {
+    "api_key": "OPENAI_API_KEY",
+    "base_url": "OPENAI_BASE_URL",
+    "runtime_token": "NEXUS_RUNTIME_TOKEN",
+    "control_environment": "NEXUS_CONTROL_ENV",
+    "runtime_grant_binding": "NEXUS_RUNTIME_GRANT_BINDING"
+  },
+  "agent": {
+    "name": "claude-code",
+    "version": "2.1.265",
+    "reasoning_effort": "high",
+    "timeout_sec": 28800
+  },
+  "attempt_policy": {
+    "max_attempts": 1,
+    "automatic_retries": 0,
+    "resume": false
+  },
+  "dry_run": true,
+  "execution_ready": false,
+  "blocking_requirements": [
+    "exact source and worker implementation pins",
+    "resolved role images and token-bound Runtime grant",
+    "fresh complete owner quota and attempt dedup",
+    "full-chain qualification for selected backend/source/compatibility",
+    "single durable intent in the deployment ledger"
+  ],
+  "submission_implemented_here": false,
+  "nexus_sdk_input_template": {
+    "sdk_package_binding": {
+      "source_archive_sha256": "8eb9f255ce2a627fd2967c33be6d299c75f51853337cd8344d12c5bf6b70feb5",
+      "worker_wheel_sha256": "a329561986eb48b05ff0f10620772f09ba4b726e2a3b93a2b6ee04df7fffb6d4",
+      "SDK_version": "1.8.26",
+      "harbor_version": "0.22.0",
+      "availability": "Qualified deployment artifact; not vendored, not asserted identical to a public PyPI wheel."
+    },
+    "id": "7f6513c1957d4158b9d230ee410c048a889e508d7fd8c6af0fd309466d69f2de",
+    "body": {
+      "imports": [
+        "nexus.extensions.harbor_trial.task",
+        "nexus.extensions.agents.claude_code",
+        "nexus.extensions.openai_clients.openai",
+        "nexus.runtime.providers.gongfeng"
+      ],
+      "task_name": "harbor_trial_task",
+      "task_config": {
+        "instance_id": "datalife-io-monitoring",
+        "agent_timeout": 28800,
+        "verifier_timeout": 14000,
+        "timeout_multiplier": 1.0,
+        "force_build": true,
+        "outer_resources": {
+          "main": {
+            "cpu": 4,
+            "memory": 14
+          },
+          "verifier": {
+            "cpu": 4,
+            "memory": 8
+          }
+        },
+        "shared_cpu_budget": true,
+        "retain_trials_dir": "outputs/harbor-trials",
+        "upload_trial_artifact": true,
+        "artifact_taihu_pat": "${NEXUS_ARTIFACT_TOKEN}"
+      },
+      "runtime_provider_name": "gongfeng",
+      "runtime_provider_config": {
+        "api_base_url": "${NEXUS_RUNTIME_API_BASE}",
+        "token": "${NEXUS_RUNTIME_TOKEN}",
+        "runtime_image": "${AB_NEXUS_RUNTIME_IMAGE}",
+        "request_timeout": 36000,
+        "ttl": "36h",
+        "purpose": "test"
+      },
+      "runtime_configs": {
+        "main": {
+          "image": "${AB_NEXUS_BASE_IMAGE}",
+          "worker_venv": true
+        }
+      },
+      "agent_name": "claude_code",
+      "agent_config": {
+        "version": "2.1.265",
+        "timeout": 28800,
+        "thinking_preset": "hunyuan",
+        "no_thinking_request_args": null,
+        "no_thinking_request_args_mode": "inherit",
+        "haiku_model": "example-model",
+        "extra_env": {
+          "CLAUDE_CODE_EFFORT_LEVEL": "high",
+          "API_TIMEOUT_MS": "7200000",
+          "CLAUDE_STREAM_IDLE_TIMEOUT_MS": "7200000",
+          "CLAUDE_BYTE_STREAM_IDLE_TIMEOUT_MS": "7200000"
+        },
+        "extra_cli_args": [
+          "--output-format",
+          "stream-json",
+          "--verbose"
+        ],
+        "binary_url": "${CLAUDE_CODE_BINARY_URL}",
+        "binary_checksum": "${CLAUDE_CODE_BINARY_SHA256}"
+      },
+      "openai_clients": {
+        "main": {
+          "name": "openai",
+          "config": {
+            "client_args": {
+              "timeout": 7200,
+              "max_retries": 0,
+              "api_key": "${OPENAI_API_KEY}",
+              "base_url": "${OPENAI_BASE_URL}"
+            },
+            "request_args": {
+              "model": "example-model",
+              "tool_choice": "auto",
+              "reasoning_effort": "high",
+              "extra_body": {
+                "chat_template_kwargs": {
+                  "preserved_thinking": true,
+                  "interleaved_thinking": true
+                }
+              }
+            },
+            "enforced_request_args": {
+              "model": "example-model"
+            }
+          }
+        }
+      },
+      "runner": {
+        "timeout": 57600
+      }
+    },
+    "task_files_binding": "materialize --output produces exact task.zip path/size/SHA for official TaskFiles materializer",
+    "not_submittable_until_environment_and_source_bindings_resolved": true,
+    "private_image_binding": "Provider runtime_image is the worker overlay; runtime_configs.main.image is the controller base. Pinned SDK reuses only the controller base for dynamic verifier Runtime. Inner task main/public/private Dockerfile sources remain canonical; no prebuilt task image substituted."
+  }
+}

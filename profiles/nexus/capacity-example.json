@@ -1,0 +1,9 @@
+{
+  "example_only_not_current_quota": true,
+  "environment": "${NEXUS_CONTROL_ENV}",
+  "complete": true,
+  "control_available": {"managers": 5, "cpu": 10, "memory_gib": 20, "slots": 100, "active_batches": 2},
+  "runtime_grant": {"token_binding": "${NEXUS_RUNTIME_GRANT_BINDING}", "available_gib": 10000},
+  "reserved_runtime_gib": 0,
+  "manager_shape": {"worker_slots": 33, "worker_cpu": 3, "worker_memory_gib": 5, "parent_cpu": 1, "parent_memory_gib": 4}
+}

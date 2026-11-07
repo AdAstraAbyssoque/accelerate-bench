@@ -1,0 +1,204 @@
+{
+  "backend_qualification_scope": {
+    "historical_route": "P1",
+    "blocking_class": "runtime_procfs_parser_plus_distinct_reference_adapter_defect",
+    "new_tuple_qualification_required": true
+  },
+  "schema": "acceleratebench.execution-descriptor.v1",
+  "identity": {
+    "model_id": "example-model",
+    "wire_model": "example-model",
+    "protocol": "anthropic_messages",
+    "task_id": "mhm2-metagenome-assembly",
+    "task_source_sha256": "b5ebdb0eba472a1a5c8b54f73705e94e0e99a7f81ae9c15f425aa93951cb9c40",
+    "environment_profile_sha256": "9f7fd2548547fd939b5922362879ce6c16d08bc4a13062a43950810fd0c0b24a",
+    "backend": "nexus"
+  },
+  "dedup_key": "3e944e0dc65ac3b4351e547f1ab826084e11f022230a63791ce6619359a2a076",
+  "canonical_contract": {
+    "task_id": "mhm2-metagenome-assembly",
+    "task_version": "1.1.0",
+    "source_version": "20261010-v5-timing3",
+    "source_sha256": "b5ebdb0eba472a1a5c8b54f73705e94e0e99a7f81ae9c15f425aa93951cb9c40",
+    "agent_timeout_sec": 28800,
+    "verifier_timeout_sec": 9000,
+    "main": {
+      "workdir": "/app",
+      "cpus": 4,
+      "memory_mb": 6144,
+      "network_mode": "public",
+      "build_timeout_sec": 3600
+    },
+    "private": {
+      "network_mode": "no-network",
+      "build_timeout_sec": 3600,
+      "cpus": 4,
+      "memory_mb": 6144
+    },
+    "public": {
+      "cpus": 4,
+      "mem_limit": "6144m"
+    },
+    "canonical_file_count": 54
+  },
+  "environment_profile": {
+    "outer_resources": {
+      "main": {
+        "cpu": 4,
+        "memory": 14
+      },
+      "verifier": {
+        "cpu": 4,
+        "memory": 8
+      }
+    },
+    "shared_main_public_cpu_budget": true,
+    "runner_timeout_sec": 54000,
+    "agent_timeout_sec": 28800,
+    "verifier_timeout_sec": 9000,
+    "timeout_multiplier": 1,
+    "images": {
+      "runtime_worker_overlay": {
+        "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+      },
+      "controller_base": {
+        "environment_variable": "AB_NEXUS_BASE_IMAGE"
+      }
+    },
+    "qualification": "requires_exact_source_image_backend_full_chain",
+    "compatibility_profile": "none",
+    "inner_hard_limits_proven": false
+  },
+  "environment_profile_id": "nexus-canonical-outer-budget-v1",
+  "provider_environment": {
+    "api_key": "ANTHROPIC_API_KEY",
+    "base_url": "ANTHROPIC_BASE_URL",
+    "runtime_token": "NEXUS_RUNTIME_TOKEN",
+    "control_environment": "NEXUS_CONTROL_ENV",
+    "runtime_grant_binding": "NEXUS_RUNTIME_GRANT_BINDING"
+  },
+  "agent": {
+    "name": "claude-code",
+    "version": "2.1.265",
+    "reasoning_effort": "high",
+    "timeout_sec": 28800
+  },
+  "attempt_policy": {
+    "max_attempts": 1,
+    "automatic_retries": 0,
+    "resume": false
+  },
+  "dry_run": true,
+  "execution_ready": false,
+  "blocking_requirements": [
+    "exact source and worker implementation pins",
+    "resolved role images and token-bound Runtime grant",
+    "fresh complete owner quota and attempt dedup",
+    "full-chain qualification for selected backend/source/compatibility",
+    "single durable intent in the deployment ledger"
+  ],
+  "submission_implemented_here": false,
+  "nexus_sdk_input_template": {
+    "sdk_package_binding": {
+      "source_archive_sha256": "875b8c34108f2030e21d73a02d9766240c04131e0dd8da15a7d9d3b7ff175d94",
+      "worker_wheel_sha256": "7fee6064532ab4c7ddc0d23e11742d858d8f9fadb7fbebd3da1686694ed816a0",
+      "SDK_version": "1.8.26",
+      "harbor_version": "0.22.0",
+      "availability": "Qualified deployment artifact; not vendored, not asserted identical to a public PyPI wheel."
+    },
+    "id": "3e944e0dc65ac3b4351e547f1ab826084e11f022230a63791ce6619359a2a076",
+    "body": {
+      "imports": [
+        "nexus.extensions.harbor_trial.task",
+        "nexus.extensions.agents.claude_code",
+        "nexus.extensions.openai_clients.anthropic_messages",
+        "nexus.runtime.providers.gongfeng"
+      ],
+      "task_name": "harbor_trial_task",
+      "task_config": {
+        "instance_id": "mhm2-metagenome-assembly",
+        "agent_timeout": 28800,
+        "verifier_timeout": 9000,
+        "timeout_multiplier": 1.0,
+        "force_build": true,
+        "outer_resources": {
+          "main": {
+            "cpu": 4,
+            "memory": 14
+          },
+          "verifier": {
+            "cpu": 4,
+            "memory": 8
+          }
+        },
+        "shared_cpu_budget": true,
+        "retain_trials_dir": "outputs/harbor-trials",
+        "upload_trial_artifact": true,
+        "artifact_taihu_pat": "${NEXUS_ARTIFACT_TOKEN}"
+      },
+      "runtime_provider_name": "gongfeng",
+      "runtime_provider_config": {
+        "api_base_url": "${NEXUS_RUNTIME_API_BASE}",
+        "token": "${NEXUS_RUNTIME_TOKEN}",
+        "runtime_image": "${AB_NEXUS_RUNTIME_IMAGE}",
+        "request_timeout": 36000,
+        "ttl": "36h",
+        "purpose": "test"
+      },
+      "runtime_configs": {
+        "main": {
+          "image": "${AB_NEXUS_BASE_IMAGE}",
+          "worker_venv": true
+        }
+      },
+      "agent_name": "claude_code",
+      "agent_config": {
+        "version": "2.1.265",
+        "timeout": 28800,
+        "thinking_preset": "hunyuan",
+        "no_thinking_request_args": null,
+        "no_thinking_request_args_mode": "inherit",
+        "haiku_model": "example-model",
+        "extra_env": {
+          "CLAUDE_CODE_EFFORT_LEVEL": "high",
+          "API_TIMEOUT_MS": "7200000",
+          "CLAUDE_STREAM_IDLE_TIMEOUT_MS": "7200000",
+          "CLAUDE_BYTE_STREAM_IDLE_TIMEOUT_MS": "7200000"
+        },
+        "extra_cli_args": [
+          "--output-format",
+          "stream-json",
+          "--verbose"
+        ],
+        "binary_url": "${CLAUDE_CODE_BINARY_URL}",
+        "binary_checksum": "${CLAUDE_CODE_BINARY_SHA256}"
+      },
+      "openai_clients": {
+        "main": {
+          "name": "anthropic_messages",
+          "config": {
+            "client_args": {
+              "timeout": 7200,
+              "max_retries": 0,
+              "api_key": "${ANTHROPIC_API_KEY}",
+              "endpoint": "${ANTHROPIC_BASE_URL}",
+              "auto_provider": false
+            },
+            "request_args": {
+              "model": "example-model"
+            },
+            "enforced_request_args": {
+              "model": "example-model"
+            }
+          }
+        }
+      },
+      "runner": {
+        "timeout": 54000
+      }
+    },
+    "task_files_binding": "materialize --output produces exact task.zip path/size/SHA for official TaskFiles materializer",
+    "not_submittable_until_environment_and_source_bindings_resolved": true,
+    "private_image_binding": "Provider runtime_image is the worker overlay; runtime_configs.main.image is the controller base. Pinned SDK reuses only the controller base for dynamic verifier Runtime. Inner task main/public/private Dockerfile sources remain canonical; no prebuilt task image substituted."
+  }
+}

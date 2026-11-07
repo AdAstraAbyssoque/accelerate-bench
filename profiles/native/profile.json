@@ -1,0 +1,10 @@
+{
+  "schema": "acceleratebench.native-profile.v1",
+  "profile_id": "native-canonical-harbor022",
+  "harbor_version": "0.22.0",
+  "resource_source": "canonical task.toml and Compose",
+  "cpu_placement": "explicit non-overlapping physical CPU sets chosen per host",
+  "task_source_mutation_allowed": false,
+  "entrypoint": "public-release/native_run.py",
+  "capabilities": "Native Linux x86_64 Docker; actual host acceptance remains required"
+}

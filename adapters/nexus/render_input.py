@@ -1,0 +1,16 @@
+"""Real Harbor Trial RunInput fields. Placeholders are never resolved or submitted here."""
+from pathlib import Path
+import json
+def render(plan):
+ assert plan['identity']['backend']=='nexus';c=plan['canonical_contract'];p=plan['environment_profile'];i=plan['identity'];native=i['protocol']=='anthropic_messages';wire=i['wire_model']
+ client_args={'timeout':7200,'max_retries':0,'api_key':'${ANTHROPIC_API_KEY}'if native else'${OPENAI_API_KEY}'}
+ if native:client_args.update(endpoint='${ANTHROPIC_BASE_URL}',auto_provider=False)
+ else:client_args['base_url']='${OPENAI_BASE_URL}'
+ request={'model':wire}
+ if not native:request.update(tool_choice='auto',reasoning_effort='high',extra_body={'chat_template_kwargs':{'preserved_thinking':True,'interleaved_thinking':True}})
+ client='anthropic_messages'if native else'openai'
+ body={'imports':['nexus.extensions.harbor_trial.task','nexus.extensions.agents.claude_code','nexus.extensions.openai_clients.'+client,'nexus.runtime.providers.gongfeng'],'task_name':'harbor_trial_task','task_config':{'instance_id':c['task_id'],'agent_timeout':28800,'verifier_timeout':c['verifier_timeout_sec'],'timeout_multiplier':1.0,'force_build':True,'outer_resources':p['outer_resources'],'shared_cpu_budget':p['shared_main_public_cpu_budget'],'retain_trials_dir':'outputs/harbor-trials','upload_trial_artifact':True,'artifact_taihu_pat':'${NEXUS_ARTIFACT_TOKEN}'},'runtime_provider_name':'gongfeng','runtime_provider_config':{'api_base_url':'${NEXUS_RUNTIME_API_BASE}','token':'${NEXUS_RUNTIME_TOKEN}','runtime_image':'${AB_NEXUS_RUNTIME_IMAGE}','request_timeout':36000,'ttl':'36h','purpose':'test'},'runtime_configs':{'main':{'image':'${AB_NEXUS_BASE_IMAGE}','worker_venv':True}},'agent_name':'claude_code','agent_config':{'version':'2.1.265','timeout':28800,'thinking_preset':'hunyuan','no_thinking_request_args':None,'no_thinking_request_args_mode':'inherit','haiku_model':wire,'extra_env':{'CLAUDE_CODE_EFFORT_LEVEL':'high','API_TIMEOUT_MS':'7200000','CLAUDE_STREAM_IDLE_TIMEOUT_MS':'7200000','CLAUDE_BYTE_STREAM_IDLE_TIMEOUT_MS':'7200000'},'extra_cli_args':['--output-format','stream-json','--verbose'],'binary_url':'${CLAUDE_CODE_BINARY_URL}','binary_checksum':'${CLAUDE_CODE_BINARY_SHA256}'},'openai_clients':{'main':{'name':client,'config':{'client_args':client_args,'request_args':request,'enforced_request_args':{'model':wire}}}},'runner':{'timeout':p['runner_timeout_sec']}}
+ binding=json.loads((Path(__file__).parent/'SDK-CONTRACT.json').read_text())['bindings'][i['protocol']]
+ result={'sdk_package_binding':binding,'id':plan['dedup_key'],'body':body,'task_files_binding':'materialize --output produces exact task.zip path/size/SHA for official TaskFiles materializer','not_submittable_until_environment_and_source_bindings_resolved':True,'private_image_binding':'Provider runtime_image is the worker overlay; runtime_configs.main.image is the controller base. Pinned SDK reuses only the controller base for dynamic verifier Runtime. Inner task main/public/private Dockerfile sources remain canonical; no prebuilt task image substituted.'}
+ if plan.get('task_bundle'):result['task_files']={'type':'zip','path':plan['task_bundle']['path'],'sha256':plan['task_bundle']['sha256'],'size':plan['task_bundle']['size']}
+ return result

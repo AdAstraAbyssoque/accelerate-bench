@@ -1,0 +1,905 @@
+{
+  "schema": "acceleratebench.nexus-profile.v1",
+  "profile_id": "nexus-canonical-outer-budget-v1",
+  "task_source_mutation_allowed": false,
+  "network_policy": "main follows canonical public; separate private retains canonical no-network",
+  "archive_policy": "complete trial archive required; retention errors remain explicit",
+  "tasks": {
+    "abyss-genome-assembly": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 1800.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "datalife-io-monitoring": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "fegrass-graph-sparsification": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 10
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 6
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "fluidity-heat-checkpoint": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "gpaw-fd-dft-restart": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "gromacs-molecular-dynamics": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 75600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 23400,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "hpcg-multigrid-pcg": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "hpl-dense-lu": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "icon-atmosphere-checkpoint": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 12000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "io500-file-io": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "lammps-molecular-dynamics": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 1800.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "mhm2-metagenome-assembly": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 9000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "minivite-louvain": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "mpas-atmosphere-restart": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "mrbayes-phylogenetics": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "nemo-lock-exchange": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "nufft-imaging": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 12000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "openfoam-cavity-piso": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 2400.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "openmc-multigroup-transport": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "paged-lm-generation": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 12000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "palabos-lattice-boltzmann": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "presto-pulsar-search": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "qe-scf-nscf-dos": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "qibotn-tensor-network-circuits": {
+      "outer_resources": {
+        "main": {
+          "cpu": 8,
+          "memory": 64
+        },
+        "verifier": {
+          "cpu": 8,
+          "memory": 34
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 90000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 50000.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "quest-circuit-simulation": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 3600.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "shengbte-phonon-transport": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "siesta-dft-restart": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 57600,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 14000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "su2-transonic-euler": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 10
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 3600.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "thundersvm-train-predict": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 18
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 3600.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "tucker-reconstruction": {
+      "outer_resources": {
+        "main": {
+          "cpu": 8,
+          "memory": 20
+        },
+        "verifier": {
+          "cpu": 8,
+          "memory": 18
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 7200.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "vpic-harris-reconnection": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 14
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 8
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 9000,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    },
+    "wtdbg2-long-read-assembly": {
+      "outer_resources": {
+        "main": {
+          "cpu": 4,
+          "memory": 10
+        },
+        "verifier": {
+          "cpu": 4,
+          "memory": 10
+        }
+      },
+      "shared_main_public_cpu_budget": true,
+      "runner_timeout_sec": 54000,
+      "agent_timeout_sec": 28800,
+      "verifier_timeout_sec": 1800.0,
+      "timeout_multiplier": 1,
+      "images": {
+        "runtime_worker_overlay": {
+          "environment_variable": "AB_NEXUS_RUNTIME_IMAGE"
+        },
+        "controller_base": {
+          "environment_variable": "AB_NEXUS_BASE_IMAGE"
+        }
+      },
+      "qualification": "requires_exact_source_image_backend_full_chain",
+      "compatibility_profile": "none",
+      "inner_hard_limits_proven": false
+    }
+  }
+}

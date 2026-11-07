@@ -1,0 +1,30 @@
+{
+  "schema": "acceleratebench.nexus-sdk-contract.v1",
+  "bindings": {
+    "openai_chat": {
+      "source_archive_sha256": "8eb9f255ce2a627fd2967c33be6d299c75f51853337cd8344d12c5bf6b70feb5",
+      "worker_wheel_sha256": "a329561986eb48b05ff0f10620772f09ba4b726e2a3b93a2b6ee04df7fffb6d4",
+      "SDK_version": "1.8.26",
+      "harbor_version": "0.22.0",
+      "availability": "Qualified deployment artifact; not vendored, not asserted identical to a public PyPI wheel."
+    },
+    "anthropic_messages": {
+      "source_archive_sha256": "875b8c34108f2030e21d73a02d9766240c04131e0dd8da15a7d9d3b7ff175d94",
+      "worker_wheel_sha256": "7fee6064532ab4c7ddc0d23e11742d858d8f9fadb7fbebd3da1686694ed816a0",
+      "SDK_version": "1.8.26",
+      "harbor_version": "0.22.0",
+      "availability": "Qualified deployment artifact; not vendored, not asserted identical to a public PyPI wheel."
+    }
+  },
+  "actual_fields": [
+    "task_config.agent_timeout",
+    "task_config.verifier_timeout",
+    "task_config.timeout_multiplier",
+    "task_config.outer_resources",
+    "task_config.shared_cpu_budget",
+    "runtime_provider_config.runtime_image",
+    "runtime_configs.main.image"
+  ],
+  "private_runtime_image_semantics": "Worker overlay and controller base are separate. Dynamic verifier fallback references main controller base in pinned SDK.",
+  "transport_and_installer_fixes_required": true
+}

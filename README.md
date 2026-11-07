@@ -50,6 +50,8 @@ PYTHON_BIN=python3.12 bash public-release/install-native.sh .venv-native
 
 The CPU numbers are examples; select available physical cores on your host. Main and public judges run together and need disjoint CPU sets. The separate private judge can reuse the main set. After reviewing the generated configuration, use the explicit `run` command documented in the native guide.
 
+For MHM2, an optional [SAM-adapter source supplement](overlays/mhm2-reference-sam-adapter-v1/README.md) corrects read/contig coordinate serialization. Select it explicitly as `mhm2-reference-sam-adapter-v1` and record the new source and image identities. Its generator validates the original task and creates a separate directory; it preserves the canonical release and historical attempts. The shared role-image build entry remains a template requiring the operator's exact base-image bindings. Results from this source cohort must retain that identity when reported.
+
 ## Nexus Cloud configuration
 
 The canonical source is shared between backends. `profiles/nexus/` defines outer sandbox budgets and role image references; `adapters/nexus/` renders SDK input templates. Main and public evaluation share the outer Cloud budget. This is a distinct experimental environment from native per-container resource isolation.
@@ -80,7 +82,7 @@ Markers support contamination detection; they do not prevent copying. A hit show
 
 ## Development checks
 
-The release-tooling CI checks archive validation, installation behavior and the 33 distributed canary markers on Python 3.12 and 3.13. It runs without dataset access or model credentials. Run the downloader checks locally with:
+The release-tooling CI checks archive validation, installation behavior, the 33 distributed canary markers and the optional source supplement's file bindings on Python 3.12 and 3.13. It runs without dataset access or model credentials. Run the downloader checks locally with:
 
 ```sh
 python -m unittest discover -s tests -p test_download_data.py -v

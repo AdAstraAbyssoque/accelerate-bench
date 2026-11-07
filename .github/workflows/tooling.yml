@@ -50,3 +50,19 @@ jobs:
               assert task['marker'] in by_file['contamination/tasks/' + task['task_id'] + '.md']
           print('All 33 release/task markers are present in their distributed notices.')
           PY
+      - name: Check optional source supplement bindings
+        shell: bash
+        run: |
+          python3 overlays/mhm2-reference-sam-adapter-v1/generate.py --help
+          python3 - <<'PY'
+          import importlib.util
+          from pathlib import Path
+          path = Path('overlays/mhm2-reference-sam-adapter-v1/generate.py')
+          spec = importlib.util.spec_from_file_location('cohort_generator', path)
+          module = importlib.util.module_from_spec(spec)
+          spec.loader.exec_module(module)
+          cohort = module.validate_package()
+          assert cohort['cohort'] == 'mhm2-reference-sam-adapter-v1'
+          assert cohort['corrected_source_sha256'] == '4b00b84d1730c4cb0612ef6211385a9121125f0c2565f38cd0daf704b5bab530'
+          print('Source supplement file bindings verified; no task assets loaded or execution started.')
+          PY

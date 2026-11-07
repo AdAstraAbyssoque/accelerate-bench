@@ -18,6 +18,8 @@ hf auth login
 python scripts/download_data.py
 ```
 
+The default dataset revision is pinned in `data-release.json` to immutable commit [`09f2566389a62cef85d106c89dd17720abef388c`](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench/tree/09f2566389a62cef85d106c89dd17720abef388c).
+
 The downloader uses your normal Hugging Face login or `HF_TOKEN`. It never embeds a credential in a configuration file. It checks the release archive's exact size/SHA-256 and every canonical file's bytes, mode and path before installing `canonical/tasks/`. Existing task directories are preserved, including directories created concurrently. If a filesystem error interrupts installation, the partial tree is retained for inspection; the command reports failure. Allow space for the approximately 2.29 GB cached archive and the extracted tasks.
 
 To verify a local archive without downloading or installing:

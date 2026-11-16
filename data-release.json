@@ -1,11 +1,11 @@
 {
   "repo_id": "AdAstraAbyssoque/accelerate-bench",
   "repo_type": "dataset",
-  "filename": "accelerate-bench-public32-harbor-tasks.tar.gz",
-  "revision": "cc9cc6abb70abcb145bff8f0ca648a55d1eed92d",
+  "filename": "accelerate-bench-v1.1-harbor-tasks.tar.gz",
+  "revision": "9b7825dbee991573edbc290f6effaffbffff8d7e",
   "revision_status": "Pinned immutable Hugging Face dataset commit; manual access approval required.",
-  "bytes": 2279894416,
-  "sha256": "9e84bd73881205ff1bf646515e045fb03e28b1f21e815001d287267b5f9a2768",
-  "canonical_manifest_sha256": "20f13fa7f27235e0eb0243d53fd82d28ee60154fdb5eee4186dbf18f20711dbf",
-  "source_version": "20261010-v5-timing3"
+  "bytes": 2559519483,
+  "sha256": "2bb8944ae801a6a6bf011e8e3059e6b2f33e98b11e327077ff8caf9077f1f77e",
+  "canonical_manifest_sha256": "3027144da88fcd87db9be2ba713c297bb188572ea5e7235b6e9aa4d4f8e6661e",
+  "source_version": "v1.1"
 }

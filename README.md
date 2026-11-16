@@ -4,7 +4,7 @@
 
 [Project website](https://acceleratebench.com) · [Dataset and access request](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench) · [Citation](CITATION.cff)
 
-The tasks are distributed through Hugging Face as Harbor task packages: each task directory contains `task.toml`, `instruction.md`, `environment/` and `tests/`. This repository provides the downloader, source verification tools and a native Docker runner built on Harbor. The canonical task source version is `20261010-v5-timing3`.
+The tasks are distributed through Hugging Face as Harbor task packages: each task directory contains `task.toml`, `instruction.md`, `environment/` and `tests/`. This repository provides the downloader, source verification tools and a native Docker runner built on Harbor. The release is benchmark v1.1, the version evaluated in the paper: task source `20261010-v5-timing3` with the v1.1 revisions of MHM2, Fluidity, SU2 and IO500 (see [release layout](public-release/PACKAGING.md)).
 
 ## Get the tasks
 
@@ -18,9 +18,9 @@ hf auth login
 python scripts/download_data.py
 ```
 
-The default dataset revision is pinned in `data-release.json` to immutable commit [`cc9cc6abb70abcb145bff8f0ca648a55d1eed92d`](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench/tree/cc9cc6abb70abcb145bff8f0ca648a55d1eed92d).
+The default dataset revision is pinned in `data-release.json` to immutable commit [`9b7825dbee991573edbc290f6effaffbffff8d7e`](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench/tree/9b7825dbee991573edbc290f6effaffbffff8d7e).
 
-The downloader uses your normal Hugging Face login or `HF_TOKEN`. It never embeds a credential in a configuration file. It checks the release archive's exact size/SHA-256 and every canonical file's bytes, mode and path before installing `canonical/tasks/`. Existing task directories are preserved, including directories created concurrently. If a filesystem error interrupts installation, the partial tree is retained for inspection; the command reports failure. Allow space for the approximately 2.28 GB cached archive and the extracted tasks.
+The downloader uses your normal Hugging Face login or `HF_TOKEN`. It never embeds a credential in a configuration file. It checks the release archive's exact size/SHA-256 and every canonical file's bytes, mode and path before installing `canonical/tasks/`. Existing task directories are preserved, including directories created concurrently. If a filesystem error interrupts installation, the partial tree is retained for inspection; the command reports failure. Allow space for the approximately 2.56 GB cached archive and the extracted tasks.
 
 To verify a local archive without downloading or installing:
 
@@ -52,8 +52,6 @@ PYTHON_BIN=python3.12 bash public-release/install-native.sh .venv-native
 
 The CPU numbers are examples; select available physical cores on your host. Main and public judges run together and need disjoint CPU sets. The separate private judge can reuse the main set. After reviewing the generated configuration, use the explicit `run` command documented in the native guide.
 
-For MHM2, an optional [SAM-adapter source supplement](overlays/mhm2-reference-sam-adapter-v1/README.md) corrects read/contig coordinate serialization. Select it explicitly as `mhm2-reference-sam-adapter-v1` and record the new source and image identities. Its generator validates the original task and creates a separate directory; it preserves the canonical release and historical attempts. The shared role-image build entry remains a template requiring the operator's exact base-image bindings. Results from this source cohort must retain that identity when reported.
-
 ## Results and contamination checks
 
 [Reproducibility guidance](REPRODUCIBILITY.md) describes the evidence needed to report a result. Keep infrastructure/API failures separate from valid scores and retain original attempts.
@@ -68,7 +66,7 @@ Markers support contamination detection; they do not prevent copying. A hit show
 
 ## Development checks
 
-The release-tooling CI checks archive validation, installation behavior, the 33 distributed canary markers and the optional source supplement's file bindings on Python 3.12 and 3.13. It runs without dataset access or model credentials, and it does not run the benchmark or validate model scores. Run the downloader checks locally with:
+The release-tooling CI checks archive validation, installation behavior and the 33 distributed canary markers on Python 3.12 and 3.13. It runs without dataset access or model credentials, and it does not run the benchmark or validate model scores. Run the downloader checks locally with:
 
 ```sh
 python -m unittest discover -s tests -p test_download_data.py -v
@@ -76,12 +74,12 @@ python -m unittest discover -s tests -p test_download_data.py -v
 
 ## Licenses and contact
 
-Author-owned project code and tools use [Apache-2.0](LICENSE). Task components retain their upstream terms; see [component licensing](public-release/LICENSING.md) and [third-party resolutions](public-release/THIRD-PARTY-RESOLUTIONS.json). Download access commitments do not replace those licenses. The paper uses CC BY 4.0.
+Author-owned project code and tools use [Apache-2.0](LICENSE). Task components retain their upstream terms; see [component licensing](public-release/LICENSING.md) and [third-party resolutions](public-release/THIRD-PARTY-RESOLUTIONS.json). The Fluidity task bundles Ubuntu packages, some under LGPL or GPL; their source packages are published in the dataset under `third-party-sources/`. Download access commitments do not replace those licenses. The paper uses CC BY 4.0.
 
 Contact: Bowen Liu — [bliu690@connect.hkust-gz.edu.cn](mailto:bliu690@connect.hkust-gz.edu.cn); corresponding author Nuo Chen — [chennuo26@gmail.com](mailto:chennuo26@gmail.com).
 
 ## 中文
 
-AccelerateBench 提供 32 道真实科学计算代码优化任务。题目以 Harbor 任务包的形式通过 Hugging Face 申请下载，每道题包含 `task.toml`、`instruction.md`、`environment/` 和 `tests/`。GitHub 提供下载校验工具和基于 Harbor 的原生 Docker 运行工具。下载器核验发布包及逐文件完整性后恢复 `canonical/tasks/`；ICON 的两项网格文件需从原官方来源补齐。正常模型评测、复现、审计和教学均可申请。
+AccelerateBench 提供 32 道真实科学计算代码优化任务。题目以 Harbor 任务包的形式通过 Hugging Face 申请下载，每道题包含 `task.toml`、`instruction.md`、`environment/` 和 `tests/`。GitHub 提供下载校验工具和基于 Harbor 的原生 Docker 运行工具。发布版本为论文评测所用的 v1.1：任务源码 `20261010-v5-timing3`，加上 MHM2、Fluidity、SU2 和 IO500 四题的 v1.1 修订。下载器核验发布包及逐文件完整性后恢复 `canonical/tasks/`；ICON 的两项网格文件需从原官方来源补齐。正常模型评测、复现、审计和教学均可申请。
 
 Canary 用于检查文本污染，不保证阻止泄露，也不改变已有评测题目。使用前请阅读各组件原有许可、下载申请及复现说明。

@@ -1,7 +1,7 @@
 {
   "schema": "acceleratebench.canonical-source.v1",
-  "source_version": "20261010-v5-timing3",
-  "release_lineage": "native-v5",
+  "source_version": "v1.1",
+  "release_lineage": "native-v5 with v1.1 task revisions",
   "tasks": [
     "abyss-genome-assembly",
     "datalife-io-monitoring",
@@ -8795,9 +8795,163 @@
       "included": true
     },
     {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/Packages",
+      "sha256": "f24b0182aca6564a073a60f9a79839df3a1616d174172d5375f2259cf5b01371",
+      "size_bytes": 13049,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/fluidity-dev_1.0.88bionic1_amd64.deb",
+      "sha256": "796766fd88677477273e687f1bc6e9c2e060fe1a10d1f82d684be197315efb5a",
+      "size_bytes": 2200,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "1cbf2294342223aa4a1e3db09f00d0b179d2ff3112a9769deec57071fb05d746",
+      "size_bytes": 58928236,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libopenmpi-dev_2.1.1-9_amd64.deb",
+      "sha256": "30a96cc28cd03f9caca36d9e97a2dad66981b4fe37ff04411e7d708a80a9ccf4",
+      "size_bytes": 1030096,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libopenmpi2_2.1.1-9_amd64.deb",
+      "sha256": "84cb08ba3764e26476af70d22580b5ffe5cf2367b202c7d7fe215f6cc5960035",
+      "size_bytes": 2065584,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libpetsc3.8.3-dev_1fluiditybionic1_amd64.deb",
+      "sha256": "4787d912aab85a307b027b46ea109cb6494c7e08ec3a01ddb89608cf7c677af8",
+      "size_bytes": 21566888,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libpetsc3.8.3_1fluiditybionic1_amd64.deb",
+      "sha256": "2d5974d675165f2360a0d0d08c5ce75029e6f6fad1065dbb7f2c7cbf76449fd2",
+      "size_bytes": 6533436,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libspud-dev_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "72180be9577ee71038e4f807df2441fe6a610a155e78bd91c5b79d2b2636aa22",
+      "size_bytes": 333660,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libsupermesh-dev_1.0-1bionic1_amd64.deb",
+      "sha256": "7b888277a9efbf8ec05b91493ed4a04edfd9281634f1231bdb65d455d04e3898",
+      "size_bytes": 66088,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libsupermesh_1.0-1bionic1_amd64.deb",
+      "sha256": "7376243fa9d9307a53f875ac3abbd6b224bc948384c8b7bab256869619bd008f",
+      "size_bytes": 462848,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libzoltan-dev_3.82-1bionic4_amd64.deb",
+      "sha256": "03b9e373f8306e150a42206294a0e03c55ed2f9bd24022c0289f58997704430b",
+      "size_bytes": 92360,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libzoltan_3.82-1bionic4_amd64.deb",
+      "sha256": "4b52b8a974ce635019d2e2131a898f059c743a21e6a1f452182a941c456240a5",
+      "size_bytes": 1588968,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/openmpi-bin_2.1.1-9_amd64.deb",
+      "sha256": "df5949c70177c11b38bc012bc7caaa30ad7ea2d4ffe721b00eb1ad9631f07c8a",
+      "size_bytes": 193296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/openmpi-common_2.1.1-9_all.deb",
+      "sha256": "cdc1d80290fa5d7413866660ac069d341d2fbd49fe7306bb09bcc8041cc6801d",
+      "size_bytes": 154296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/provenance.json",
+      "sha256": "3640c28444818c90eb061305d854fdf6a0ed64ad2a8f02607fd21911e53ff0c3",
+      "size_bytes": 3417,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-dxdiff_1.1.8.2-1bionic1_all.deb",
+      "sha256": "b5719ca55d82998be4c5b69fb869235bdfe77ab22e2a18aef70b7dd47e21c6a3",
+      "size_bytes": 12464,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "92b526f0a7dbce4c121e0879ae1672d281b8e4e37116a7a683c9904589b6b898",
+      "size_bytes": 68296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-spud_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "30a9d809634c739145e9c744177729e974e60d2abb4c02696047887eab7073a2",
+      "size_bytes": 11860,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/spud-diamond_1.1.8.2-1bionic1_all.deb",
+      "sha256": "c156798892a4f5947146da8f866268a8ba8ac65e214afee3e53922cec22281c4",
+      "size_bytes": 58664,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/spudtools_1.1.8.2-1bionic1_all.deb",
+      "sha256": "e1359817fa21c5c08380cf183a9d94f5344a9ed9cbbcad6a4d19178604c8ce45",
+      "size_bytes": 8644,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/upstream-InRelease",
+      "sha256": "0b8f3227249fe07255fcae6aaf7fc034c9632f1bb02f782c3bfb215cc112a737",
+      "size_bytes": 16156,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/.fluidity-ppa/upstream-Packages.gz",
+      "sha256": "bac551c79f3827158e0712085172833a89f5590fcdc4e861e50ab6fd9ab889f7",
+      "size_bytes": 4944,
+      "mode": 420,
+      "included": true
+    },
+    {
       "path": "fluidity-heat-checkpoint/environment/Dockerfile",
-      "sha256": "beb797c183de22b40cf36d5dbf36691b3b83227c9f2b6e4e0394feddcea99fbe",
-      "size_bytes": 2340,
+      "sha256": "0343a58b5442287317ba2df9555a57e74eae5c9c49804463625a89f52ab270a7",
+      "size_bytes": 2342,
       "mode": 420,
       "included": true
     },
@@ -8830,9 +8984,163 @@
       "included": true
     },
     {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/Packages",
+      "sha256": "f24b0182aca6564a073a60f9a79839df3a1616d174172d5375f2259cf5b01371",
+      "size_bytes": 13049,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/fluidity-dev_1.0.88bionic1_amd64.deb",
+      "sha256": "796766fd88677477273e687f1bc6e9c2e060fe1a10d1f82d684be197315efb5a",
+      "size_bytes": 2200,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "1cbf2294342223aa4a1e3db09f00d0b179d2ff3112a9769deec57071fb05d746",
+      "size_bytes": 58928236,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libopenmpi-dev_2.1.1-9_amd64.deb",
+      "sha256": "30a96cc28cd03f9caca36d9e97a2dad66981b4fe37ff04411e7d708a80a9ccf4",
+      "size_bytes": 1030096,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libopenmpi2_2.1.1-9_amd64.deb",
+      "sha256": "84cb08ba3764e26476af70d22580b5ffe5cf2367b202c7d7fe215f6cc5960035",
+      "size_bytes": 2065584,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libpetsc3.8.3-dev_1fluiditybionic1_amd64.deb",
+      "sha256": "4787d912aab85a307b027b46ea109cb6494c7e08ec3a01ddb89608cf7c677af8",
+      "size_bytes": 21566888,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libpetsc3.8.3_1fluiditybionic1_amd64.deb",
+      "sha256": "2d5974d675165f2360a0d0d08c5ce75029e6f6fad1065dbb7f2c7cbf76449fd2",
+      "size_bytes": 6533436,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libspud-dev_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "72180be9577ee71038e4f807df2441fe6a610a155e78bd91c5b79d2b2636aa22",
+      "size_bytes": 333660,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libsupermesh-dev_1.0-1bionic1_amd64.deb",
+      "sha256": "7b888277a9efbf8ec05b91493ed4a04edfd9281634f1231bdb65d455d04e3898",
+      "size_bytes": 66088,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libsupermesh_1.0-1bionic1_amd64.deb",
+      "sha256": "7376243fa9d9307a53f875ac3abbd6b224bc948384c8b7bab256869619bd008f",
+      "size_bytes": 462848,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libzoltan-dev_3.82-1bionic4_amd64.deb",
+      "sha256": "03b9e373f8306e150a42206294a0e03c55ed2f9bd24022c0289f58997704430b",
+      "size_bytes": 92360,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/libzoltan_3.82-1bionic4_amd64.deb",
+      "sha256": "4b52b8a974ce635019d2e2131a898f059c743a21e6a1f452182a941c456240a5",
+      "size_bytes": 1588968,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/openmpi-bin_2.1.1-9_amd64.deb",
+      "sha256": "df5949c70177c11b38bc012bc7caaa30ad7ea2d4ffe721b00eb1ad9631f07c8a",
+      "size_bytes": 193296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/openmpi-common_2.1.1-9_all.deb",
+      "sha256": "cdc1d80290fa5d7413866660ac069d341d2fbd49fe7306bb09bcc8041cc6801d",
+      "size_bytes": 154296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/provenance.json",
+      "sha256": "3640c28444818c90eb061305d854fdf6a0ed64ad2a8f02607fd21911e53ff0c3",
+      "size_bytes": 3417,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/python3-dxdiff_1.1.8.2-1bionic1_all.deb",
+      "sha256": "b5719ca55d82998be4c5b69fb869235bdfe77ab22e2a18aef70b7dd47e21c6a3",
+      "size_bytes": 12464,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/python3-fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "92b526f0a7dbce4c121e0879ae1672d281b8e4e37116a7a683c9904589b6b898",
+      "size_bytes": 68296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/python3-spud_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "30a9d809634c739145e9c744177729e974e60d2abb4c02696047887eab7073a2",
+      "size_bytes": 11860,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/spud-diamond_1.1.8.2-1bionic1_all.deb",
+      "sha256": "c156798892a4f5947146da8f866268a8ba8ac65e214afee3e53922cec22281c4",
+      "size_bytes": 58664,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/spudtools_1.1.8.2-1bionic1_all.deb",
+      "sha256": "e1359817fa21c5c08380cf183a9d94f5344a9ed9cbbcad6a4d19178604c8ce45",
+      "size_bytes": 8644,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/upstream-InRelease",
+      "sha256": "0b8f3227249fe07255fcae6aaf7fc034c9632f1bb02f782c3bfb215cc112a737",
+      "size_bytes": 16156,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa/upstream-Packages.gz",
+      "sha256": "bac551c79f3827158e0712085172833a89f5590fcdc4e861e50ab6fd9ab889f7",
+      "size_bytes": 4944,
+      "mode": 420,
+      "included": true
+    },
+    {
       "path": "fluidity-heat-checkpoint/environment/public-judge/Dockerfile",
-      "sha256": "ff806d00d29a3194fbf437becb057fce775a475865c6fb3c6339a5f44819a1e9",
-      "size_bytes": 2208,
+      "sha256": "19f440cea1be11835192273e9944939722f44df010d2aebf06f64b449743e73d",
+      "size_bytes": 2209,
       "mode": 420,
       "included": true
     },
@@ -8845,8 +9153,8 @@
     },
     {
       "path": "fluidity-heat-checkpoint/environment/public-judge/check_outputs.py",
-      "sha256": "50649e4da01e101270cd4fc0a0b47473da898ffe0454a187ec478cd8b5b772ae",
-      "size_bytes": 9950,
+      "sha256": "9272d37c17369cd34809332af722cded2a087fbf47ddbbe7912b0c465bb1adcf",
+      "size_bytes": 11066,
       "mode": 420,
       "included": true
     },
@@ -8977,9 +9285,163 @@
       "included": true
     },
     {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/Packages",
+      "sha256": "f24b0182aca6564a073a60f9a79839df3a1616d174172d5375f2259cf5b01371",
+      "size_bytes": 13049,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/fluidity-dev_1.0.88bionic1_amd64.deb",
+      "sha256": "796766fd88677477273e687f1bc6e9c2e060fe1a10d1f82d684be197315efb5a",
+      "size_bytes": 2200,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "1cbf2294342223aa4a1e3db09f00d0b179d2ff3112a9769deec57071fb05d746",
+      "size_bytes": 58928236,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libopenmpi-dev_2.1.1-9_amd64.deb",
+      "sha256": "30a96cc28cd03f9caca36d9e97a2dad66981b4fe37ff04411e7d708a80a9ccf4",
+      "size_bytes": 1030096,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libopenmpi2_2.1.1-9_amd64.deb",
+      "sha256": "84cb08ba3764e26476af70d22580b5ffe5cf2367b202c7d7fe215f6cc5960035",
+      "size_bytes": 2065584,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libpetsc3.8.3-dev_1fluiditybionic1_amd64.deb",
+      "sha256": "4787d912aab85a307b027b46ea109cb6494c7e08ec3a01ddb89608cf7c677af8",
+      "size_bytes": 21566888,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libpetsc3.8.3_1fluiditybionic1_amd64.deb",
+      "sha256": "2d5974d675165f2360a0d0d08c5ce75029e6f6fad1065dbb7f2c7cbf76449fd2",
+      "size_bytes": 6533436,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libspud-dev_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "72180be9577ee71038e4f807df2441fe6a610a155e78bd91c5b79d2b2636aa22",
+      "size_bytes": 333660,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libsupermesh-dev_1.0-1bionic1_amd64.deb",
+      "sha256": "7b888277a9efbf8ec05b91493ed4a04edfd9281634f1231bdb65d455d04e3898",
+      "size_bytes": 66088,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libsupermesh_1.0-1bionic1_amd64.deb",
+      "sha256": "7376243fa9d9307a53f875ac3abbd6b224bc948384c8b7bab256869619bd008f",
+      "size_bytes": 462848,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libzoltan-dev_3.82-1bionic4_amd64.deb",
+      "sha256": "03b9e373f8306e150a42206294a0e03c55ed2f9bd24022c0289f58997704430b",
+      "size_bytes": 92360,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/libzoltan_3.82-1bionic4_amd64.deb",
+      "sha256": "4b52b8a974ce635019d2e2131a898f059c743a21e6a1f452182a941c456240a5",
+      "size_bytes": 1588968,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/openmpi-bin_2.1.1-9_amd64.deb",
+      "sha256": "df5949c70177c11b38bc012bc7caaa30ad7ea2d4ffe721b00eb1ad9631f07c8a",
+      "size_bytes": 193296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/openmpi-common_2.1.1-9_all.deb",
+      "sha256": "cdc1d80290fa5d7413866660ac069d341d2fbd49fe7306bb09bcc8041cc6801d",
+      "size_bytes": 154296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/provenance.json",
+      "sha256": "3640c28444818c90eb061305d854fdf6a0ed64ad2a8f02607fd21911e53ff0c3",
+      "size_bytes": 3417,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/python3-dxdiff_1.1.8.2-1bionic1_all.deb",
+      "sha256": "b5719ca55d82998be4c5b69fb869235bdfe77ab22e2a18aef70b7dd47e21c6a3",
+      "size_bytes": 12464,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/python3-fluidity_4.1.17bionic4_amd64.deb",
+      "sha256": "92b526f0a7dbce4c121e0879ae1672d281b8e4e37116a7a683c9904589b6b898",
+      "size_bytes": 68296,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/python3-spud_1.1.8.2-1bionic1_amd64.deb",
+      "sha256": "30a9d809634c739145e9c744177729e974e60d2abb4c02696047887eab7073a2",
+      "size_bytes": 11860,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/spud-diamond_1.1.8.2-1bionic1_all.deb",
+      "sha256": "c156798892a4f5947146da8f866268a8ba8ac65e214afee3e53922cec22281c4",
+      "size_bytes": 58664,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/spudtools_1.1.8.2-1bionic1_all.deb",
+      "sha256": "e1359817fa21c5c08380cf183a9d94f5344a9ed9cbbcad6a4d19178604c8ce45",
+      "size_bytes": 8644,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/upstream-InRelease",
+      "sha256": "0b8f3227249fe07255fcae6aaf7fc034c9632f1bb02f782c3bfb215cc112a737",
+      "size_bytes": 16156,
+      "mode": 420,
+      "included": true
+    },
+    {
+      "path": "fluidity-heat-checkpoint/tests/.fluidity-ppa/upstream-Packages.gz",
+      "sha256": "bac551c79f3827158e0712085172833a89f5590fcdc4e861e50ab6fd9ab889f7",
+      "size_bytes": 4944,
+      "mode": 420,
+      "included": true
+    },
+    {
       "path": "fluidity-heat-checkpoint/tests/Dockerfile",
-      "sha256": "6b192bef474300a0984d3d32d317af195966e928206aca727535d743356f1d50",
-      "size_bytes": 2108,
+      "sha256": "06bdd5979e94782caa7e9414383819a4fd633c75b889e8353f096c572586310c",
+      "size_bytes": 2141,
       "mode": 420,
       "included": true
     },
@@ -8992,8 +9454,8 @@
     },
     {
       "path": "fluidity-heat-checkpoint/tests/check_outputs.py",
-      "sha256": "50649e4da01e101270cd4fc0a0b47473da898ffe0454a187ec478cd8b5b772ae",
-      "size_bytes": 9950,
+      "sha256": "9272d37c17369cd34809332af722cded2a087fbf47ddbbe7912b0c465bb1adcf",
+      "size_bytes": 11066,
       "mode": 420,
       "included": true
     },
@@ -11022,15 +11484,15 @@
     },
     {
       "path": "io500-file-io/environment/public-judge/trace_contract.py",
-      "sha256": "78acffd02d764df80b0066db6f4fbdc7eec886c181af58a1bea945e63ea8213a",
-      "size_bytes": 11340,
+      "sha256": "fdf3f1089e3c91e26fa3bcc098800cecbbf6a0b4286a07cdab339fdfd7d899bd",
+      "size_bytes": 11788,
       "mode": 420,
       "included": true
     },
     {
       "path": "io500-file-io/environment/public-judge/traced_process.py",
-      "sha256": "0cd5fac40b4a0c681cdc0ca591ea9ad0e5a595bfbd6d2698ae2e532c0cc2a6f7",
-      "size_bytes": 6012,
+      "sha256": "426c8458d57f5131c05b63e19016c33c3f7c4b2edc83767af9c08940a41c6c84",
+      "size_bytes": 6029,
       "mode": 420,
       "included": true
     },
@@ -11400,15 +11862,15 @@
     },
     {
       "path": "io500-file-io/tests/trace_contract.py",
-      "sha256": "78acffd02d764df80b0066db6f4fbdc7eec886c181af58a1bea945e63ea8213a",
-      "size_bytes": 11340,
+      "sha256": "fdf3f1089e3c91e26fa3bcc098800cecbbf6a0b4286a07cdab339fdfd7d899bd",
+      "size_bytes": 11788,
       "mode": 420,
       "included": true
     },
     {
       "path": "io500-file-io/tests/traced_process.py",
-      "sha256": "0cd5fac40b4a0c681cdc0ca591ea9ad0e5a595bfbd6d2698ae2e532c0cc2a6f7",
-      "size_bytes": 6012,
+      "sha256": "426c8458d57f5131c05b63e19016c33c3f7c4b2edc83767af9c08940a41c6c84",
+      "size_bytes": 6029,
       "mode": 420,
       "included": true
     },
@@ -11743,8 +12205,8 @@
     },
     {
       "path": "mhm2-metagenome-assembly/environment/mhm2-source.tar.gz",
-      "sha256": "75f49c46a6e32c774feb401be9e58703ef65fed19265e5fb8db549d64f66476e",
-      "size_bytes": 1031991,
+      "sha256": "e20da2286349666c31c623772ad4eef49f4c2916aa005bde447f19597f0f4684",
+      "size_bytes": 1027803,
       "mode": 420,
       "included": true
     },
@@ -11757,15 +12219,15 @@
     },
     {
       "path": "mhm2-metagenome-assembly/environment/public-judge/application_judge.py",
-      "sha256": "67ca717a76aca87ef4471f5b6185bd4b1b89c66357fbd750310deb58b6af6ee2",
-      "size_bytes": 12387,
+      "sha256": "736bcf073536c3faed3d014e95240f25d96d1c750fe1b7629e0d812782c62bac",
+      "size_bytes": 12669,
       "mode": 420,
       "included": true
     },
     {
       "path": "mhm2-metagenome-assembly/environment/public-judge/check_pipeline.py",
-      "sha256": "28c82239e356c7bceb02017d0d41f42e1dc1ccb49b1ed41bfbb4d3f3a9c05fd5",
-      "size_bytes": 22841,
+      "sha256": "21501aadc6b4c17b8ed3731d38d41aef2f5fb27001fc37297950d281655a74a3",
+      "size_bytes": 18635,
       "mode": 420,
       "included": true
     },
@@ -11834,8 +12296,8 @@
     },
     {
       "path": "mhm2-metagenome-assembly/environment/public-judge/mhm2-source.tar.gz",
-      "sha256": "75f49c46a6e32c774feb401be9e58703ef65fed19265e5fb8db549d64f66476e",
-      "size_bytes": 1031991,
+      "sha256": "e20da2286349666c31c623772ad4eef49f4c2916aa005bde447f19597f0f4684",
+      "size_bytes": 1027803,
       "mode": 420,
       "included": true
     },
@@ -11851,6 +12313,13 @@
       "sha256": "92433ba1e21e6b273082507cd0748e2660309636d417befdb09476d16ca38d41",
       "size_bytes": 1585,
       "mode": 420,
+      "included": true
+    },
+    {
+      "path": "mhm2-metagenome-assembly/environment/public-judge/semantic_v4.py",
+      "sha256": "bfcb08cbfda523d522439cc2d73dd000a70ea9739d6a5ce0e5829845b46ce40f",
+      "size_bytes": 11582,
+      "mode": 384,
       "included": true
     },
     {
@@ -11918,15 +12387,15 @@
     },
     {
       "path": "mhm2-metagenome-assembly/instruction.md",
-      "sha256": "268a59e9fac05257f8113bbfaa3c2dc44eaf782f05e643566190680a57e769a8",
-      "size_bytes": 4008,
+      "sha256": "b9f2821212aa0c8602481a57d12a4ed7bd25ebf8c71f525835f7985d3fd1e212",
+      "size_bytes": 5145,
       "mode": 420,
       "included": true
     },
     {
       "path": "mhm2-metagenome-assembly/task.toml",
-      "sha256": "7172e1360df3b9131d9779f270f758c51f8d51655aa7e5d59866ea6ce3056e23",
-      "size_bytes": 820,
+      "sha256": "f34d1e31bbbab6d91a505e6714160795e617383c6c7c1ca7e399ac221ce3173d",
+      "size_bytes": 883,
       "mode": 420,
       "included": true
     },
@@ -11939,15 +12408,15 @@
     },
     {
       "path": "mhm2-metagenome-assembly/tests/application_judge.py",
-      "sha256": "67ca717a76aca87ef4471f5b6185bd4b1b89c66357fbd750310deb58b6af6ee2",
-      "size_bytes": 12387,
+      "sha256": "736bcf073536c3faed3d014e95240f25d96d1c750fe1b7629e0d812782c62bac",
+      "size_bytes": 12669,
       "mode": 420,
       "included": true
     },
     {
       "path": "mhm2-metagenome-assembly/tests/check_pipeline.py",
-      "sha256": "28c82239e356c7bceb02017d0d41f42e1dc1ccb49b1ed41bfbb4d3f3a9c05fd5",
-      "size_bytes": 22841,
+      "sha256": "21501aadc6b4c17b8ed3731d38d41aef2f5fb27001fc37297950d281655a74a3",
+      "size_bytes": 18635,
       "mode": 420,
       "included": true
     },
@@ -12037,8 +12506,8 @@
     },
     {
       "path": "mhm2-metagenome-assembly/tests/mhm2-source.tar.gz",
-      "sha256": "75f49c46a6e32c774feb401be9e58703ef65fed19265e5fb8db549d64f66476e",
-      "size_bytes": 1031991,
+      "sha256": "e20da2286349666c31c623772ad4eef49f4c2916aa005bde447f19597f0f4684",
+      "size_bytes": 1027803,
       "mode": 420,
       "included": true
     },
@@ -12047,6 +12516,13 @@
       "sha256": "92433ba1e21e6b273082507cd0748e2660309636d417befdb09476d16ca38d41",
       "size_bytes": 1585,
       "mode": 420,
+      "included": true
+    },
+    {
+      "path": "mhm2-metagenome-assembly/tests/semantic_v4.py",
+      "sha256": "bfcb08cbfda523d522439cc2d73dd000a70ea9739d6a5ce0e5829845b46ce40f",
+      "size_bytes": 11582,
+      "mode": 384,
       "included": true
     },
     {
@@ -21830,8 +22306,8 @@
     },
     {
       "path": "su2-transonic-euler/task.toml",
-      "sha256": "ca6db6a774cc533c11f8bb2c1fd701b4ee733463c425b4a42282ca922376a37a",
-      "size_bytes": 895,
+      "sha256": "fed03e0965eac3cb2116fe93b84f0d3fc7be8f011e16c93691087a12cdfe8f8c",
+      "size_bytes": 896,
       "mode": 420,
       "included": true
     },
@@ -21844,8 +22320,8 @@
     },
     {
       "path": "su2-transonic-euler/tests/eval_core.py",
-      "sha256": "0bb3db44146665c7d3d688087cd001eea66fd3bb8f5ec63f1e4a7c8b37a9599e",
-      "size_bytes": 24469,
+      "sha256": "a5b3db4cb831b0de432acac9d2ce5ad8b27aea22ecce0c21554fdd4a0e3901c4",
+      "size_bytes": 25050,
       "mode": 420,
       "included": true
     },
@@ -26179,9 +26655,12 @@
     "fegrass-graph-sparsification/tests/reference_application": 493,
     "fluidity-heat-checkpoint": 493,
     "fluidity-heat-checkpoint/environment": 493,
+    "fluidity-heat-checkpoint/environment/.fluidity-ppa": 493,
     "fluidity-heat-checkpoint/environment/public-judge": 493,
+    "fluidity-heat-checkpoint/environment/public-judge/.fluidity-ppa": 493,
     "fluidity-heat-checkpoint/environment/public-judge/legacy": 493,
     "fluidity-heat-checkpoint/tests": 493,
+    "fluidity-heat-checkpoint/tests/.fluidity-ppa": 493,
     "fluidity-heat-checkpoint/tests/legacy": 493,
     "gpaw-fd-dft-restart": 493,
     "gpaw-fd-dft-restart/environment": 493,
@@ -26717,5 +27196,12 @@
     "wtdbg2-long-read-assembly/tests": 493,
     "wtdbg2-long-read-assembly/tests/reference": 493,
     "wtdbg2-long-read-assembly/tests/reference/scripts": 493
+  },
+  "base_source_version": "20261010-v5-timing3",
+  "v1_1_revised_tasks": {
+    "mhm2-metagenome-assembly": "Task version 1.1.1: revised statement and correctness checks (partition-invariant comparison of FASTA, GFA and SAM-derived depths) and the updated reference source archive.",
+    "fluidity-heat-checkpoint": "Output parser accepts all valid VTK appended encodings (UInt32/UInt64 headers, byte order, uncompressed); dependencies are installed from Ubuntu packages bundled in .fluidity-ppa/ instead of the online PPA.",
+    "su2-transonic-euler": "Verifier time limit 14000 s instead of 3600 s; command timeouts are reported as evaluation errors.",
+    "io500-file-io": "System-call trace parser accepts restarted wait4 records; strace runs with --seccomp-bpf."
   }
 }

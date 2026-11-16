@@ -166,6 +166,184 @@
       "nested_notice_note": "Nested gtest code retains BSD-3-Clause; parent scope annotation does not relicense it.",
       "author_action_required_for_noncommercial_distribution_under_existing_terms": false,
       "commercial_permission_inferred": false
+    },
+    {
+      "task": "fluidity-heat-checkpoint",
+      "members": "environment/.fluidity-ppa/, environment/public-judge/.fluidity-ppa/, tests/.fluidity-ppa/",
+      "previous_finding": "Benchmark v1.1 bundles Ubuntu binary packages from the fluidity-core PPA in .fluidity-ppa/ (three identical copies), so the task no longer depends on the online PPA when its images are built.",
+      "resolution": "Each package keeps its Debian copyright file under usr/share/doc/<package>/copyright. Several are LGPL or GPL licensed; their corresponding source packages are published in the same dataset as third-party-sources/fluidity-ppa-sources.tar (SHA-256 f5adf308c8da02403b0fa456dcbdf6612b67b74b3db2e7a69e1dadccf2d48d26, 228085760 bytes), checked against the PPA source index. The packages are not relicensed and no additional rights are granted.",
+      "source_packages": {
+        "fluidity": {
+          "version": "4.1.17bionic4",
+          "license": "LGPL v2.1",
+          "binary_packages": [
+            "fluidity 4.1.17bionic4 (fluidity_4.1.17bionic4_amd64.deb)",
+            "python3-fluidity 4.1.17bionic4 (python3-fluidity_4.1.17bionic4_amd64.deb)"
+          ]
+        },
+        "fluidity-dev": {
+          "version": "1.0.88bionic1",
+          "license": "GPL version 2 or later (metapackage)",
+          "binary_packages": [
+            "fluidity-dev 1.0.88bionic1 (fluidity-dev_1.0.88bionic1_amd64.deb)"
+          ]
+        },
+        "libsupermesh": {
+          "version": "1.0-1bionic1",
+          "license": "LGPL version 2.1",
+          "binary_packages": [
+            "libsupermesh-dev 1.0-1bionic1 (libsupermesh-dev_1.0-1bionic1_amd64.deb)",
+            "libsupermesh 1.0-1bionic1 (libsupermesh_1.0-1bionic1_amd64.deb)"
+          ]
+        },
+        "openmpi": {
+          "version": "2.1.1-9",
+          "license": "Open MPI BSD-style license; libltdl LGPL 2.1 or later",
+          "binary_packages": [
+            "libopenmpi-dev 2.1.1-9 (libopenmpi-dev_2.1.1-9_amd64.deb)",
+            "libopenmpi2 2.1.1-9 (libopenmpi2_2.1.1-9_amd64.deb)",
+            "openmpi-bin 2.1.1-9 (openmpi-bin_2.1.1-9_amd64.deb)",
+            "openmpi-common 2.1.1-9 (openmpi-common_2.1.1-9_all.deb)"
+          ]
+        },
+        "petsc3.8.3": {
+          "version": "1fluiditybionic1",
+          "license": "PETSc BSD-style license; some files MIT",
+          "binary_packages": [
+            "libpetsc3.8.3-dev 1fluiditybionic1 (libpetsc3.8.3-dev_1fluiditybionic1_amd64.deb)",
+            "libpetsc3.8.3 1fluiditybionic1 (libpetsc3.8.3_1fluiditybionic1_amd64.deb)"
+          ]
+        },
+        "spud": {
+          "version": "1.1.8.2-1bionic1",
+          "license": "library LGPL 2.1 or later; diamond GUI GPL 3 or later",
+          "binary_packages": [
+            "libspud-dev 1.1.8.2-1bionic1 (libspud-dev_1.1.8.2-1bionic1_amd64.deb)",
+            "python3-dxdiff 1.1.8.2-1bionic1 (python3-dxdiff_1.1.8.2-1bionic1_all.deb)",
+            "python3-spud 1.1.8.2-1bionic1 (python3-spud_1.1.8.2-1bionic1_amd64.deb)",
+            "spud-diamond 1.1.8.2-1bionic1 (spud-diamond_1.1.8.2-1bionic1_all.deb)",
+            "spudtools 1.1.8.2-1bionic1 (spudtools_1.1.8.2-1bionic1_all.deb)"
+          ]
+        },
+        "zoltan": {
+          "version": "3.82-1bionic4",
+          "license": "LGPL v2.1",
+          "binary_packages": [
+            "libzoltan-dev 3.82-1bionic4 (libzoltan-dev_3.82-1bionic4_amd64.deb)",
+            "libzoltan 3.82-1bionic4 (libzoltan_3.82-1bionic4_amd64.deb)"
+          ]
+        }
+      },
+      "evidence": [
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/fluidity-dev_1.0.88bionic1_amd64.deb",
+          "package": "fluidity-dev",
+          "version": "1.0.88bionic1",
+          "source": "fluidity-dev"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/fluidity_4.1.17bionic4_amd64.deb",
+          "package": "fluidity",
+          "version": "4.1.17bionic4",
+          "source": "fluidity"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libopenmpi-dev_2.1.1-9_amd64.deb",
+          "package": "libopenmpi-dev",
+          "version": "2.1.1-9",
+          "source": "openmpi"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libopenmpi2_2.1.1-9_amd64.deb",
+          "package": "libopenmpi2",
+          "version": "2.1.1-9",
+          "source": "openmpi"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libpetsc3.8.3-dev_1fluiditybionic1_amd64.deb",
+          "package": "libpetsc3.8.3-dev",
+          "version": "1fluiditybionic1",
+          "source": "petsc3.8.3"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libpetsc3.8.3_1fluiditybionic1_amd64.deb",
+          "package": "libpetsc3.8.3",
+          "version": "1fluiditybionic1",
+          "source": "petsc3.8.3"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libspud-dev_1.1.8.2-1bionic1_amd64.deb",
+          "package": "libspud-dev",
+          "version": "1.1.8.2-1bionic1",
+          "source": "spud"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libsupermesh-dev_1.0-1bionic1_amd64.deb",
+          "package": "libsupermesh-dev",
+          "version": "1.0-1bionic1",
+          "source": "libsupermesh"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libsupermesh_1.0-1bionic1_amd64.deb",
+          "package": "libsupermesh",
+          "version": "1.0-1bionic1",
+          "source": "libsupermesh"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libzoltan-dev_3.82-1bionic4_amd64.deb",
+          "package": "libzoltan-dev",
+          "version": "3.82-1bionic4",
+          "source": "zoltan"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/libzoltan_3.82-1bionic4_amd64.deb",
+          "package": "libzoltan",
+          "version": "3.82-1bionic4",
+          "source": "zoltan"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/openmpi-bin_2.1.1-9_amd64.deb",
+          "package": "openmpi-bin",
+          "version": "2.1.1-9",
+          "source": "openmpi"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/openmpi-common_2.1.1-9_all.deb",
+          "package": "openmpi-common",
+          "version": "2.1.1-9",
+          "source": "openmpi"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-dxdiff_1.1.8.2-1bionic1_all.deb",
+          "package": "python3-dxdiff",
+          "version": "1.1.8.2-1bionic1",
+          "source": "spud"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-fluidity_4.1.17bionic4_amd64.deb",
+          "package": "python3-fluidity",
+          "version": "4.1.17bionic4",
+          "source": "fluidity"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/python3-spud_1.1.8.2-1bionic1_amd64.deb",
+          "package": "python3-spud",
+          "version": "1.1.8.2-1bionic1",
+          "source": "spud"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/spud-diamond_1.1.8.2-1bionic1_all.deb",
+          "package": "spud-diamond",
+          "version": "1.1.8.2-1bionic1",
+          "source": "spud"
+        },
+        {
+          "member": "fluidity-heat-checkpoint/environment/.fluidity-ppa/spudtools_1.1.8.2-1bionic1_all.deb",
+          "package": "spudtools",
+          "version": "1.1.8.2-1bionic1",
+          "source": "spud"
+        }
+      ]
     }
   ]
 }

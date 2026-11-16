@@ -1,12 +1,25 @@
-# Accelerate Bench
+<div align="center">
 
-**Can coding agents make whole scientific applications faster without breaking them?**
+<p align="center">
+  <img src="assets/accelerate-bench-banner.png" alt="Accelerate Bench" width="900">
+</p>
 
-[Website](https://acceleratebench.com) · [Paper (PDF)](https://acceleratebench.com/assets/accelerate-bench.pdf) · [Leaderboard](https://acceleratebench.com/#leaderboard) · [Task packages on Hugging Face](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench) · [Citation](#citation)
+[![Website](https://img.shields.io/badge/Website-acceleratebench.com-2f66b0)](https://acceleratebench.com)
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
+[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](https://acceleratebench.com/assets/accelerate-bench.pdf)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
+[![Harbor](https://img.shields.io/badge/Format-Harbor%20tasks-172b45)](#quickstart)
+[![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
 
-![benchmark v1.1](https://img.shields.io/badge/benchmark-v1.1-2b5d8c) ![32 tasks](https://img.shields.io/badge/tasks-32-2b5d8c) ![Harbor task format](https://img.shields.io/badge/format-Harbor-2b5d8c) ![code license Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-555555)
+**Accelerate Bench** asks whether coding agents can make whole scientific applications faster without breaking them. Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
 
-Accelerate Bench gives a coding agent a working scientific application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, together with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster while every required output stays correct. It can test candidates against public checks; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
+<p align="center">
+  <img src="assets/accelerate-bench-overview.png" alt="Commit-derived tasks compared with Accelerate Bench's workload-defined tasks" width="900">
+</p>
+
+<sub>Commit-derived tasks (left, as in GSO) start from one known performance commit and measure the agent's patch against it. Accelerate Bench tasks (right) fix the workload and the computation that must be preserved; the agent decides where and how to optimize, and a separate verifier scores the final program.</sub>
+
+</div>
 
 - **32 tasks** from 8 application areas, adapted from scientific codes and supercomputing competitions
 - **Harbor task packages**: each task is a directory with `task.toml`, `instruction.md`, `environment/` and `tests/`
@@ -151,6 +164,7 @@ When you report results, run each task once, keep infrastructure and API failure
 | `profiles/native/` | Settings of the native runner |
 | `canaries.json`, `contamination/`, `tools/scan_canaries.py` | Contamination markers and their scanner |
 | `tests/` | Downloader tests |
+| `assets/` | Images used in this README |
 
 CI runs the downloader tests and checks the 33 contamination markers on Python 3.12 and 3.13. To run the tests locally: `python -m unittest discover -s tests -p test_download_data.py -v`.
 

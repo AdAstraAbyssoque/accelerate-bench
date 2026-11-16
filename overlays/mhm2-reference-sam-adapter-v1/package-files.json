@@ -1,0 +1,19 @@
+{
+  "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "README.md": "7ccd80064643bdccc3cc0b188d82f2235025dfef8f5e0917a30a509ba4c75c3f",
+  "THIRD_PARTY_NOTICES.md": "25cafaa9ddef0dd64363104640f8fb4d4b5916a281688cd504e3484523f93508",
+  "canonical-task-files.json": "1b01dbbb01c50e2951ca8eb47caa0e7dd334465787b579ee8188ca6cac813865",
+  "cohort.json": "eb5d593edf93cd8a425b4e14873db57ea95e0e2cfc0f08b7bcf2e6db234ba119",
+  "generate.py": "0e9fdedd0598d6bca684d9376b17db05857572c7fb5987c81e77018c52bf6e31",
+  "images/Dockerfile": "bc62786adcee54f1b0f5ecef09b2abd7762b7469f1f9fbc8ce1c158907fd1a81",
+  "images/cohort-rebuild.py": "34814c37cbd8195d19595fdff92e06340824f70a31c3204cb3ba07102e06dfd7",
+  "overlay/include/klign.hpp": "1487ea11955436b158cc49cba21cf057a7c6221c28535876398d7ede88e77f88",
+  "overlay/include/reference_sam_adapter.hpp": "812c7f1fdd0f0bc04aeeb624d03d3d614ce2cfb7041c6185bc75422236f6e04d",
+  "reference-adapter.patch": "15edb5a35155d49f9c3715e0e867818f1aabcbd1d4cd95f3108dce2f4e095a5d",
+  "source-files.json": "8489f7f1f434175ee5943724c24c05fe725a86aefb322d1bec6cd0a08bfee92c",
+  "third-party-notices/mhm2/LICENSE.txt": "ce662b2d512ad98a3a4258af4a0d6a0cb99d445a43f2098bb1b24b7e05926398",
+  "third-party-notices/mhm2/src/zstr/LICENSE": "f2b4ae40b0311262960b46f697497994fe35706110ac04f04b3768d9ea7df460",
+  "third-party-notices/mhm2/upcxx-utils/LICENSE.txt": "9f320cbd950b25d8ccaeea792b311883c8ac3cb77d1a040732f6cb174d840278",
+  "third-party-notices/mhm2/upcxx-utils/memory-allocators/LICENSE": "6f1b5c97a3aae32defd61e789b6cacee1fc0d605406944106a6115057bfb0924",
+  "third-party-notices/mhm2/zstr/LICENSE": "f2b4ae40b0311262960b46f697497994fe35706110ac04f04b3768d9ea7df460"
+}

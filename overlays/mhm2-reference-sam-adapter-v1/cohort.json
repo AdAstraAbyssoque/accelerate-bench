@@ -1,0 +1,54 @@
+{
+  "schema": "accelerate-bench.optional-source-cohort.v1",
+  "cohort": "mhm2-reference-sam-adapter-v1",
+  "task": "mhm2-metagenome-assembly",
+  "status": "staging_draft_not_integrated",
+  "original_source_sha256": "75f49c46a6e32c774feb401be9e58703ef65fed19265e5fb8db549d64f66476e",
+  "corrected_source_sha256": "4b00b84d1730c4cb0612ef6211385a9121125f0c2565f38cd0daf704b5bab530",
+  "corrected_source_bytes": 1027475,
+  "modified_members": [
+    "mhm2/include/klign.hpp"
+  ],
+  "added_members": [
+    "mhm2/include/reference_sam_adapter.hpp"
+  ],
+  "placements": [
+    "environment/mhm2-source.tar.gz",
+    "environment/public-judge/mhm2-source.tar.gz",
+    "tests/mhm2-source.tar.gz"
+  ],
+  "canonical_task_files_sha256": "1b01dbbb01c50e2951ca8eb47caa0e7dd334465787b579ee8188ca6cac813865",
+  "source_files_sha256": "8489f7f1f434175ee5943724c24c05fe725a86aefb322d1bec6cd0a08bfee92c",
+  "overlay_files": {
+    "overlay/include/klign.hpp": "1487ea11955436b158cc49cba21cf057a7c6221c28535876398d7ede88e77f88",
+    "overlay/include/reference_sam_adapter.hpp": "812c7f1fdd0f0bc04aeeb624d03d3d614ce2cfb7041c6185bc75422236f6e04d"
+  },
+  "patch_sha256": "15edb5a35155d49f9c3715e0e867818f1aabcbd1d4cd95f3108dce2f4e095a5d",
+  "image_rebuild_sha256": "34814c37cbd8195d19595fdff92e06340824f70a31c3204cb3ba07102e06dfd7",
+  "original_resources": {
+    "main_cpus": 4,
+    "main_memory_mib": 6144,
+    "public_cpus": 4,
+    "public_memory_mib": 6144,
+    "private_cpus": 4,
+    "private_memory_mib": 6144,
+    "agent_timeout_seconds": 28800,
+    "private_timeout_seconds": 9000,
+    "task_build_timeout_seconds": 3600,
+    "source_build_timeout_seconds": 2400
+  },
+  "base_images": {
+    "main": null,
+    "public": null,
+    "private": null
+  },
+  "no_task_science_file_changes": true,
+  "no_automatic_activation": true,
+  "third_party_notice_files": [
+    "third-party-notices/mhm2/src/zstr/LICENSE",
+    "third-party-notices/mhm2/LICENSE.txt",
+    "third-party-notices/mhm2/zstr/LICENSE",
+    "third-party-notices/mhm2/upcxx-utils/memory-allocators/LICENSE",
+    "third-party-notices/mhm2/upcxx-utils/LICENSE.txt"
+  ]
+}

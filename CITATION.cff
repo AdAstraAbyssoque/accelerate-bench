@@ -1,0 +1,93 @@
+# Citation metadata for the staged, unpublished release.
+# The software-level license is deliberately omitted: Apache-2.0 covers
+# original project code only; third-party components retain their own terms.
+# The CC-BY-4.0 field below applies only to preferred-citation (the manuscript).
+cff-version: 1.2.0
+message: If you use Accelerate Bench, please cite the manuscript described in preferred-citation. This
+  is an unpublished manuscript citation; no arXiv identifier, DOI or release version has been assigned.
+type: software
+title: 'Accelerate Bench: Evaluating Agents for Application-Level Program Optimization'
+authors:
+- family-names: Liu
+  given-names: Bowen
+  affiliation: Tencent Hy Team
+  email: bliu690@connect.hkust-gz.edu.cn
+- family-names: Li
+  given-names: Yuhan
+  affiliation: Tencent Hy Team
+- family-names: Chen
+  given-names: Nuo
+  affiliation: Tencent Hy Team
+  email: chennuo26@gmail.com
+- family-names: Luo
+  given-names: Weile
+  affiliation: Tencent Hy Team
+- family-names: Peng
+  given-names: Miao
+  affiliation: Tencent Hy Team; The Hong Kong University of Science and Technology (Guangzhou)
+- family-names: Zhang
+  given-names: Qintong
+  affiliation: Tencent Hy Team; Peking University
+- family-names: Zhang
+  given-names: Qifan
+  affiliation: Tencent Hy Team; The Hong Kong University of Science and Technology (Guangzhou)
+- family-names: Li
+  given-names: Jia
+  affiliation: The Hong Kong University of Science and Technology; The Hong Kong University of Science
+    and Technology (Guangzhou)
+- family-names: Gao
+  given-names: Ziqi
+  affiliation: Tsinghua University
+- family-names: Huang
+  given-names: Lydell
+  affiliation: Tencent Hy Team
+url: https://acceleratebench.com/
+contact:
+- family-names: Liu
+  given-names: Bowen
+  email: bliu690@connect.hkust-gz.edu.cn
+- family-names: Chen
+  given-names: Nuo
+  email: chennuo26@gmail.com
+preferred-citation:
+  type: unpublished
+  title: 'Accelerate Bench: Evaluating Agents for Application-Level Program Optimization'
+  authors:
+  - family-names: Liu
+    given-names: Bowen
+    affiliation: Tencent Hy Team
+    email: bliu690@connect.hkust-gz.edu.cn
+  - family-names: Li
+    given-names: Yuhan
+    affiliation: Tencent Hy Team
+  - family-names: Chen
+    given-names: Nuo
+    affiliation: Tencent Hy Team
+    email: chennuo26@gmail.com
+  - family-names: Luo
+    given-names: Weile
+    affiliation: Tencent Hy Team
+  - family-names: Peng
+    given-names: Miao
+    affiliation: Tencent Hy Team; The Hong Kong University of Science and Technology (Guangzhou)
+  - family-names: Zhang
+    given-names: Qintong
+    affiliation: Tencent Hy Team; Peking University
+  - family-names: Zhang
+    given-names: Qifan
+    affiliation: Tencent Hy Team; The Hong Kong University of Science and Technology (Guangzhou)
+  - family-names: Li
+    given-names: Jia
+    affiliation: The Hong Kong University of Science and Technology; The Hong Kong University of Science
+      and Technology (Guangzhou)
+  - family-names: Gao
+    given-names: Ziqi
+    affiliation: Tsinghua University
+  - family-names: Huang
+    given-names: Lydell
+    affiliation: Tencent Hy Team
+  url: https://acceleratebench.com/
+  license: CC-BY-4.0
+  notes: Unpublished manuscript; arXiv submission is on hold. Yuhan Li is Project Lead; Nuo Chen is the
+    corresponding author. Bowen Liu is an additional contact. The manuscript license does not apply to
+    benchmark code or third-party components.

@@ -1,0 +1,136 @@
+{
+  "schema": "acceleratebench.external-data-provenance.v1",
+  "checked_at_utc": "2026-11-05T20:02:15.044593+00:00",
+  "source_snapshot": "20261010-v5-timing3",
+  "canonical_files_verified": 9,
+  "unique_assets": 4,
+  "all_official_bytes_match": true,
+  "canonical_files_changed": false,
+  "assets": [
+    {
+      "asset_id": "adult-a9a",
+      "upstream_url": "https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a9a",
+      "download_sha256": "f5d5ffd8d865ff41328e7ee043e4b020816914ff6843ff15b98905ddbedce906",
+      "download_size_bytes": 2329875,
+      "archive_member": null,
+      "payload_sha256": "f5d5ffd8d865ff41328e7ee043e4b020816914ff6843ff15b98905ddbedce906",
+      "payload_size_bytes": 2329875,
+      "canonical_paths": [
+        "thundersvm-train-predict/environment/public-judge/data/a9a",
+        "thundersvm-train-predict/tests/data/a9a"
+      ],
+      "official_bytes_match": true,
+      "benchmark_prebundling_transform": "None: exact byte equality to the current official LIBSVM file.",
+      "upstream_transform": "LIBSVM credits UCI Adult and describes quantile-binarized continuous features and one-hot categorical features; the benchmark does not reimplement or alter that conversion.",
+      "line_count": 32561,
+      "data_license": "CC-BY-4.0",
+      "license_basis": "UCI Adult dataset landing page explicitly lists CC BY 4.0; LIBSVM documents the Adult provenance and conversion.",
+      "license_scope_inference": "Applies the stated upstream Adult dataset terms to this identified, unchanged LIBSVM representation; not the LIBSVM software license.",
+      "attribution": "Barry Becker and Ronny Kohavi (1996), Adult, UCI Machine Learning Repository, DOI 10.24432/C5XW20; LIBSVM dataset conversion/distribution by Chih-Jen Lin and collaborators.",
+      "citations": [
+        "https://archive.ics.uci.edu/dataset/2/adult",
+        "https://doi.org/10.24432/C5XW20",
+        "https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#a9a"
+      ],
+      "redistribution_evidence_status": "documented_upstream_data_terms",
+      "planned_delivery": "Retain data attribution alongside files or fetch verified unchanged bytes."
+    },
+    {
+      "asset_id": "adult-a9a-t",
+      "upstream_url": "https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary/a9a.t",
+      "download_sha256": "1f448a153f0320399a7e40836eb207655b0bde0f21fc941cc472193daa9f5de9",
+      "download_size_bytes": 1164628,
+      "archive_member": null,
+      "payload_sha256": "1f448a153f0320399a7e40836eb207655b0bde0f21fc941cc472193daa9f5de9",
+      "payload_size_bytes": 1164628,
+      "canonical_paths": [
+        "thundersvm-train-predict/environment/public-judge/data/a9a.t",
+        "thundersvm-train-predict/tests/data/a9a.t"
+      ],
+      "official_bytes_match": true,
+      "benchmark_prebundling_transform": "None: exact byte equality to the current official LIBSVM file.",
+      "upstream_transform": "LIBSVM credits UCI Adult and describes quantile-binarized continuous features and one-hot categorical features; the benchmark does not reimplement or alter that conversion.",
+      "line_count": 16281,
+      "data_license": "CC-BY-4.0",
+      "license_basis": "UCI Adult dataset landing page explicitly lists CC BY 4.0; LIBSVM documents the Adult provenance and conversion.",
+      "license_scope_inference": "Applies the stated upstream Adult dataset terms to this identified, unchanged LIBSVM representation; not the LIBSVM software license.",
+      "attribution": "Barry Becker and Ronny Kohavi (1996), Adult, UCI Machine Learning Repository, DOI 10.24432/C5XW20; LIBSVM dataset conversion/distribution by Chih-Jen Lin and collaborators.",
+      "citations": [
+        "https://archive.ics.uci.edu/dataset/2/adult",
+        "https://doi.org/10.24432/C5XW20",
+        "https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html#a9a"
+      ],
+      "redistribution_evidence_status": "documented_upstream_data_terms",
+      "planned_delivery": "Retain data attribution alongside files or fetch verified unchanged bytes."
+    },
+    {
+      "asset_id": "mpas-x1-10242",
+      "upstream_url": "https://www2.mmm.ucar.edu/projects/mpas/atmosphere_meshes/x1.10242.tar.gz",
+      "download_sha256": "4dde31932bc45aaf467e2717d17ec8e5e54d73c3ebbeea027087bfdb8b98ab56",
+      "download_size_bytes": 6321104,
+      "archive_member": "x1.10242.grid.nc",
+      "payload_sha256": "729a77fddd829ad5206661a9478d8473454552e3b3c5a1af768f4128e188295c",
+      "payload_size_bytes": 14014372,
+      "canonical_paths": [
+        "mpas-atmosphere-restart/environment/data/x1.10242.grid.nc",
+        "mpas-atmosphere-restart/environment/public-judge/data/x1.10242.grid.nc",
+        "mpas-atmosphere-restart/tests/data/x1.10242.grid.nc"
+      ],
+      "official_bytes_match": true,
+      "benchmark_prebundling_transform": "None: exact byte equality to the grid member of the official 240-km mesh tarball.",
+      "runtime_transform": "The benchmark copies the base grid and may rotate coordinates around the polar axis per the case recipe. This modifies a per-case copy, not the frozen bundled base grid.",
+      "runtime_transform_source": "mpas-atmosphere-restart/environment/public-judge/make_case.py",
+      "runtime_transform_source_sha256": "5c8e8a8e6cf5c513126f7a8e16ed45bd43ba8cf7d4c2fe0abcf7df9e36d91135",
+      "data_license": "CC-BY-4.0 (UCAR general data-repository terms; applicability inference)",
+      "license_basis": "UCAR data-repository terms grant CC BY 4.0 for copyrighted repository materials unless otherwise stated and permit lawful use of non-copyrighted materials. The matched mesh is served by the official UCAR MPAS mesh repository; no file-specific exception was found.",
+      "license_scope_inference": "Applying UCAR general data-repository terms to this official UCAR-hosted mesh; the archive itself contains no separate license notice. MPAS source-code BSD terms were not used as the data license.",
+      "attribution": "MPAS-Atmosphere developers, NSF NCAR/UCAR, quasi-uniform 240-km SCVT mesh (10,242 cells), official MPAS-Atmosphere mesh download repository.",
+      "citations": [
+        "https://mpas-dev.github.io/atmosphere/atmosphere_meshes.html",
+        "https://www2.mmm.ucar.edu/projects/mpas/atmosphere_meshes/x1.10242.tar.gz",
+        "https://www.ucar.edu/terms-of-use/data"
+      ],
+      "redistribution_evidence_status": "general_repository_terms_identified",
+      "planned_delivery": "Retain attribution and repository-policy link alongside files or fetch verified unchanged bytes."
+    },
+    {
+      "asset_id": "icon-grid-0013",
+      "upstream_url": "http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0013/icon_grid_0013_R02B04_G.nc",
+      "download_sha256": "31821695d5d98c1c5a1d77c4d07deccf579f92e9127c89cdd300a2343e57db51",
+      "download_size_bytes": 17889372,
+      "archive_member": null,
+      "payload_sha256": "31821695d5d98c1c5a1d77c4d07deccf579f92e9127c89cdd300a2343e57db51",
+      "payload_size_bytes": 17889372,
+      "canonical_paths": [
+        "icon-atmosphere-checkpoint/environment/public-judge/grid.nc",
+        "icon-atmosphere-checkpoint/tests/grid.nc"
+      ],
+      "official_bytes_match": true,
+      "benchmark_prebundling_transform": "None: exact byte equality to the official file named in the NetCDF global ICON_grid_file_uri attribute.",
+      "netcdf_provenance": {
+        "title": "ICON grid description",
+        "institution": "Max Planck Institute for Meteorology/Deutscher Wetterdienst",
+        "uuidOfHGrid": "c8481318-398c-11e8-a225-05e6d8b4e7ef",
+        "grid_root": 2,
+        "grid_level": 4,
+        "number_of_grid_used": 13,
+        "ICON_grid_file_uri": "http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0013/icon_grid_0013_R02B04_G.nc"
+      },
+      "runtime_transform": "The inspected benchmark preparation script copies the bundled grid into each case.",
+      "runtime_transform_source": "icon-atmosphere-checkpoint/environment/public-judge/make_case.py",
+      "runtime_transform_source_sha256": "e6c82bb68e4f1b4506207a4133a05f6d1e2233cbad346ac9cf29c1fa451ef815",
+      "data_license": null,
+      "license_basis": "The official grid service and the downloaded NetCDF identify provenance but do not state an explicit dataset redistribution license in the inspected material. The ICON framework BSD license is not automatically assigned to this separate data file.",
+      "attribution": "Max Planck Institute for Meteorology and Deutscher Wetterdienst, ICON grid 0013 / R02B04_G, UUID c8481318-398c-11e8-a225-05e6d8b4e7ef.",
+      "citations": [
+        "https://docs.icon-model.org/2025.04/buildrun/buildrun_running.html#grid-files",
+        "http://icon-downloads.mpimet.mpg.de/",
+        "http://icon-downloads.mpimet.mpg.de/grids/public/mpim/0013/icon_grid_0013_R02B04_G.nc"
+      ],
+      "redistribution_evidence_status": "source_and_bytes_confirmed_explicit_data_grant_not_found",
+      "planned_delivery": "Default public-source plan retrieves these two copies from the official service by URL and exact SHA during local hydration rather than embedding their payload. The full private canonical candidate remains unchanged.",
+      "transport_observation": "The official documentation and stored URI use HTTP. The HTTP download succeeded and matched the frozen SHA; the HTTPS endpoint failed TLS negotiation during this check."
+    }
+  ],
+  "scope_note": "Only primary upstream dataset/project sources were consulted. Provenance, byte identity and distribution terms are distinct fields; absent explicit terms are not characterized as infringement."
+}

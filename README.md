@@ -8,7 +8,7 @@
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
 [![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](https://acceleratebench.com/assets/accelerate-bench.pdf)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
-[![Harbor](https://img.shields.io/badge/Format-Harbor%20tasks-172b45)](#quickstart)
+[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
 [![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
 
 **Accelerate Bench** asks whether coding agents can make whole scientific applications faster without breaking them. Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
@@ -54,6 +54,23 @@ Benchmark v1.1, one run per agent and task, with all final programs scored on th
 ## Quickstart
 
 You need Python 3.12 or later. Running tasks needs Linux x86-64 with Docker Engine and Docker Compose v2.
+
+### Run from Harbor Hub
+
+31 of the 32 tasks are published as the Harbor dataset [`accelerate-bench/accelerate-bench`](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench). Harbor downloads them for you; no access request is needed:
+
+```sh
+pip install harbor==0.22.0
+export ANTHROPIC_API_KEY=...
+harbor run -d accelerate-bench/accelerate-bench@v1.1 \
+  -a claude-code -m anthropic/MODEL_ID --ak reasoning_effort=high -n 1
+```
+
+Add `-i hpcg-multigrid-pcg` to run a single task. ICON is not on Harbor Hub because its two grid files have to be downloaded from their official source; the full release below includes it.
+
+### Full release from Hugging Face
+
+The full release has all 32 tasks in one archive, with a manifest of every file's SHA-256.
 
 **1. Request access.** Open the [dataset page](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench), sign in and describe your institution and planned evaluation. Approval is manual. Evaluation, reproduction, auditing and teaching are supported; please do not train on the tasks or redistribute them.
 
@@ -174,7 +191,7 @@ Version 1.1 is the version evaluated in the paper. It starts from task source `2
 
 ## Data use, licenses and contamination
 
-The task packages are for evaluation. Please do not use them for pretraining, fine-tuning, distillation or reinforcement-learning training, and do not redistribute them publicly. The project's own code is Apache-2.0; every task component keeps its upstream license ([component licensing](public-release/LICENSING.md), [third-party resolutions](public-release/THIRD-PARTY-RESOLUTIONS.json)). The Fluidity task bundles Ubuntu packages, some under LGPL or GPL; their source packages are published in the dataset under `third-party-sources/`.
+The tasks are an evaluation benchmark. Please do not use them for pretraining, fine-tuning, distillation or reinforcement-learning training. The project's own code is Apache-2.0; every task component keeps its upstream license ([component licensing](public-release/LICENSING.md), [third-party resolutions](public-release/THIRD-PARTY-RESOLUTIONS.json)). The Fluidity task bundles Ubuntu packages, some under LGPL or GPL; their source packages are attached to the [v1.1 release](https://github.com/AdAstraAbyssoque/accelerate-bench/releases/tag/v1.1) as `fluidity-ppa-sources.tar` and are also in the Hugging Face dataset under `third-party-sources/`.
 
 The release carries one release-level and 32 task-level contamination markers ([CONTAMINATION_NOTICE.md](CONTAMINATION_NOTICE.md)). To scan a corpus, run `python tools/scan_canaries.py --manifest canaries.json /path/to/corpus.jsonl`. A hit shows that the text is present; it is not proof of training.
 
@@ -195,4 +212,4 @@ Contact: Bowen Liu ([bliu690@connect.hkust-gz.edu.cn](mailto:bliu690@connect.hku
 
 Accelerate Bench 评测编码 agent 能否在保持结果正确的前提下，让完整的科学计算应用跑得更快。发布版本为论文评测所用的 v1.1，共 32 道题，以 Harbor 任务包的形式在 Hugging Face 申请下载（约 2.56 GB）。
 
-上手步骤：在[数据集页面](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)申请访问；用 `scripts/download_data.py` 下载并逐文件校验；用 `harbor run` 运行任一题。复现论文设置（绑定物理核）请用 `public-release/native_run.py`。每题得分为 r = C × max(0, 1 − T_候选 / T_基线)，Score@1 为 32 题平均。题目仅供评测，请勿用于训练或公开再分发。
+最快的上手方式是 Harbor Hub：除 ICON 外的 31 道题已发布为 Harbor 数据集 `accelerate-bench/accelerate-bench`，无需申请，`harbor run -d accelerate-bench/accelerate-bench@v1.1 -a claude-code -m anthropic/模型名` 即可运行。完整的 32 题发布包需在[数据集页面](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)申请访问，用 `scripts/download_data.py` 下载并逐文件校验。复现论文设置（绑定物理核）请用 `public-release/native_run.py`。每题得分为 r = C × max(0, 1 − T_候选 / T_基线)，Score@1 为 32 题平均。题目仅供评测，请勿用于训练。

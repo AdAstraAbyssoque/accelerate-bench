@@ -8,7 +8,7 @@
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
 [![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](https://acceleratebench.com/assets/accelerate-bench.pdf)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
-[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
+[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEViYmLZ2dmTk5M3NzcAAAAAAAAAAAAXFxcAAAAAAADm5ua5ubkAAAAAAAAAAAAnJycAAAAAAAAAAAAAAAAAAABwY2aBAAAAEHRSTlP%2F%2F%2F%2F%2FXP4A%2F4vP%2F%2F8varL%2F%2BqIUWgAAAa9JREFUeNqtl4uyqyAMRXfEXF4i%2F%2F%2B3J6C3vq2SZmpnVFgkG4QE%2Fy5s6N3ouZofXT9ctcN5bzf3Xcy74TEgHXrPjPQI4PjG3FdA4i%2BWbgGD56%2Fmh2tA4keWrgCOH5o7B4z82MYzwIv%2BawKa%2Bq8IeBv%2FXge80v9kLibAwA02rAC%2BBeAXQOImSx8AN9p%2FgGsFuBnArHABzQrMKqBxCj4TgbY1sKwFtEs4yQhNBCUGqCKQGNDrAD2cDuCw2Ug6e2gB3G8sWGtoKR9adHSv4oZvQ64DWkBcMYYNGNHCTM%2Fkz%2BS9SztA7CiKIzEGa2Po5IcQIwknEBEbeUCEa4C8K2HI8LGTK5aByTKISy%2BSZwFs7zyQl8FI3LE0rkOhUALKG%2BFw2Ku010CaWIRs4xZgPgDzANB1k7uxAkoIod7XEA4e%2BAMg56JlJyKSIEBVRFNFRCSKeTuNm4WUp8uiCGlyNpatLXfLNBqzW0jqpaz%2BmNSfs3pD0W9p6k1Vva3rDxb10aY%2FXNXHuz7BUKc4%2BiRLnebpE019qqtPtvXpvr7g0Jc8%2BqJLX%2Fb9oPD8Qen7g%2BL7Vfn%2FBx9GVrPGBCJaAAAAAElFTkSuQmCC)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
 [![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
 
 **Accelerate Bench** asks whether coding agents can make whole scientific applications faster without breaking them. Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
@@ -22,7 +22,7 @@
 </div>
 
 - **32 tasks** from 8 application areas, adapted from scientific codes and supercomputing competitions
-- **Harbor task packages**: each task is a directory with `task.toml`, `instruction.md`, `environment/` and `tests/`
+- **Harbor task packages**: each task is a directory with `task.toml`, `instruction.md`, `environment/` and `tests/`; 31 of them are on [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench) and run with one `harbor run` command (see [Quickstart](#quickstart))
 - **Score@1**: correctness-gated runtime savings averaged over the 32 tasks (see [Scoring](#scoring))
 - **Version 1.1**, the version evaluated in the paper
 
@@ -121,42 +121,42 @@ Choose free physical cores on your host, not SMT siblings. The agent's container
 
 ## Tasks
 
-| Task | Directory | Area | CPUs | Memory | Verifier limit |
-|---|---|---|---:|---:|---:|
-| GROMACS | `gromacs-molecular-dynamics` | Molecules & materials | 4 | 6 GiB | 390 min |
-| LAMMPS | `lammps-molecular-dynamics` | Molecules & materials | 4 | 8 GiB | 30 min |
-| GPAW | `gpaw-fd-dft-restart` | Molecules & materials | 4 | 6 GiB | 233 min |
-| Quantum ESPRESSO | `qe-scf-nscf-dos` | Molecules & materials | 4 | 6 GiB | 233 min |
-| SIESTA | `siesta-dft-restart` | Molecules & materials | 4 | 6 GiB | 233 min |
-| Fluidity | `fluidity-heat-checkpoint` | Fluids & atmosphere | 4 | 8 GiB | 233 min |
-| ICON | `icon-atmosphere-checkpoint` | Fluids & atmosphere | 4 | 6 GiB | 200 min |
-| MPAS-A | `mpas-atmosphere-restart` | Fluids & atmosphere | 4 | 6 GiB | 233 min |
-| NEMO | `nemo-lock-exchange` | Fluids & atmosphere | 4 | 8 GiB | 233 min |
-| OpenFOAM | `openfoam-cavity-piso` | Fluids & atmosphere | 4 | 8 GiB | 40 min |
-| Palabos | `palabos-lattice-boltzmann` | Fluids & atmosphere | 4 | 6 GiB | 120 min |
-| SU2 | `su2-transonic-euler` | Fluids & atmosphere | 4 | 8 GiB | 233 min |
-| OpenMC | `openmc-multigroup-transport` | Transport & astronomy | 4 | 6 GiB | 120 min |
-| ShengBTE | `shengbte-phonon-transport` | Transport & astronomy | 4 | 6 GiB | 233 min |
-| VPIC | `vpic-harris-reconnection` | Transport & astronomy | 4 | 6 GiB | 150 min |
-| PRESTO | `presto-pulsar-search` | Transport & astronomy | 4 | 6 GiB | 120 min |
-| ABySS | `abyss-genome-assembly` | Bioinformatics | 4 | 8 GiB | 30 min |
-| MHM2 | `mhm2-metagenome-assembly` | Bioinformatics | 4 | 6 GiB | 150 min |
-| MrBayes | `mrbayes-phylogenetics` | Bioinformatics | 4 | 6 GiB | 120 min |
-| wtdbg2 | `wtdbg2-long-read-assembly` | Bioinformatics | 4 | 8 GiB | 30 min |
-| HPCG-derived | `hpcg-multigrid-pcg` | Numerics & graphs | 4 | 6 GiB | 120 min |
-| HPL-derived | `hpl-dense-lu` | Numerics & graphs | 4 | 6 GiB | 120 min |
-| Graph sparsification | `fegrass-graph-sparsification` | Numerics & graphs | 4 | 4 GiB | 120 min |
-| miniVite | `minivite-louvain` | Numerics & graphs | 4 | 6 GiB | 120 min |
-| NUFFT imaging | `nufft-imaging` | Numerics & graphs | 4 | 6 GiB | 200 min |
-| Tucker reconstruction | `tucker-reconstruction` | Numerics & graphs | 8 | 16 GiB | 120 min |
-| QuEST | `quest-circuit-simulation` | Quantum circuits | 4 | 8 GiB | 60 min |
-| QiboTN | `qibotn-tensor-network-circuits` | Quantum circuits | 8 | 32 GiB | 833 min |
-| Paged LM generation | `paged-lm-generation` | Machine learning | 4 | 6 GiB | 200 min |
-| ThunderSVM | `thundersvm-train-predict` | Machine learning | 4 | 8 GiB | 60 min |
-| DataLife | `datalife-io-monitoring` | Scientific I/O | 4 | 6 GiB | 233 min |
-| IO500-derived | `io500-file-io` | Scientific I/O | 4 | 6 GiB | 120 min |
+| Task | Directory | Area | CPUs | Memory | Verifier limit | Harbor Hub |
+|---|---|---|---:|---:|---:|---|
+| GROMACS | `gromacs-molecular-dynamics` | Molecules & materials | 4 | 6 GiB | 390 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/gromacs-molecular-dynamics) |
+| LAMMPS | `lammps-molecular-dynamics` | Molecules & materials | 4 | 8 GiB | 30 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/lammps-molecular-dynamics) |
+| GPAW | `gpaw-fd-dft-restart` | Molecules & materials | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/gpaw-fd-dft-restart) |
+| Quantum ESPRESSO | `qe-scf-nscf-dos` | Molecules & materials | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/qe-scf-nscf-dos) |
+| SIESTA | `siesta-dft-restart` | Molecules & materials | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/siesta-dft-restart) |
+| Fluidity | `fluidity-heat-checkpoint` | Fluids & atmosphere | 4 | 8 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/fluidity-heat-checkpoint) |
+| ICON | `icon-atmosphere-checkpoint` | Fluids & atmosphere | 4 | 6 GiB | 200 min | Full release only |
+| MPAS-A | `mpas-atmosphere-restart` | Fluids & atmosphere | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/mpas-atmosphere-restart) |
+| NEMO | `nemo-lock-exchange` | Fluids & atmosphere | 4 | 8 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/nemo-lock-exchange) |
+| OpenFOAM | `openfoam-cavity-piso` | Fluids & atmosphere | 4 | 8 GiB | 40 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/openfoam-cavity-piso) |
+| Palabos | `palabos-lattice-boltzmann` | Fluids & atmosphere | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/palabos-lattice-boltzmann) |
+| SU2 | `su2-transonic-euler` | Fluids & atmosphere | 4 | 8 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/su2-transonic-euler) |
+| OpenMC | `openmc-multigroup-transport` | Transport & astronomy | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/openmc-multigroup-transport) |
+| ShengBTE | `shengbte-phonon-transport` | Transport & astronomy | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/shengbte-phonon-transport) |
+| VPIC | `vpic-harris-reconnection` | Transport & astronomy | 4 | 6 GiB | 150 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/vpic-harris-reconnection) |
+| PRESTO | `presto-pulsar-search` | Transport & astronomy | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/presto-pulsar-search) |
+| ABySS | `abyss-genome-assembly` | Bioinformatics | 4 | 8 GiB | 30 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/abyss-genome-assembly) |
+| MHM2 | `mhm2-metagenome-assembly` | Bioinformatics | 4 | 6 GiB | 150 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/mhm2-metagenome-assembly) |
+| MrBayes | `mrbayes-phylogenetics` | Bioinformatics | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/mrbayes-phylogenetics) |
+| wtdbg2 | `wtdbg2-long-read-assembly` | Bioinformatics | 4 | 8 GiB | 30 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/wtdbg2-long-read-assembly) |
+| HPCG-derived | `hpcg-multigrid-pcg` | Numerics & graphs | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/hpcg-multigrid-pcg) |
+| HPL-derived | `hpl-dense-lu` | Numerics & graphs | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/hpl-dense-lu) |
+| Graph sparsification | `fegrass-graph-sparsification` | Numerics & graphs | 4 | 4 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/fegrass-graph-sparsification) |
+| miniVite | `minivite-louvain` | Numerics & graphs | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/minivite-louvain) |
+| NUFFT imaging | `nufft-imaging` | Numerics & graphs | 4 | 6 GiB | 200 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/nufft-imaging) |
+| Tucker reconstruction | `tucker-reconstruction` | Numerics & graphs | 8 | 16 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/tucker-reconstruction) |
+| QuEST | `quest-circuit-simulation` | Quantum circuits | 4 | 8 GiB | 60 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/quest-circuit-simulation) |
+| QiboTN | `qibotn-tensor-network-circuits` | Quantum circuits | 8 | 32 GiB | 833 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/qibotn-tensor-network-circuits) |
+| Paged LM generation | `paged-lm-generation` | Machine learning | 4 | 6 GiB | 200 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/paged-lm-generation) |
+| ThunderSVM | `thundersvm-train-predict` | Machine learning | 4 | 8 GiB | 60 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/thundersvm-train-predict) |
+| DataLife | `datalife-io-monitoring` | Scientific I/O | 4 | 6 GiB | 233 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/datalife-io-monitoring) |
+| IO500-derived | `io500-file-io` | Scientific I/O | 4 | 6 GiB | 120 min | [Open ↗](https://hub.harborframework.com/tasks/accelerate-bench/io500-file-io) |
 
-Every task gives the agent eight hours. CPUs and memory are the agent's allocation; the verifier limit is the private verifier's time limit. HPCG-derived, HPL-derived and IO500-derived are adapted tasks, not official competition benchmark scores. The [website](https://acceleratebench.com/#tasks) shows an illustration and per-agent results for every task.
+Every task gives the agent eight hours. CPUs and memory are the agent's allocation; the verifier limit is the private verifier's time limit. HPCG-derived, HPL-derived and IO500-derived are adapted tasks, not official competition benchmark scores. The [website](https://acceleratebench.com/#tasks) shows an illustration and per-agent results for every task; the Harbor Hub column links to each task's page in the [Harbor dataset](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench). ICON is only in the full release because its grid files are downloaded from their official source.
 
 ## Scoring
 

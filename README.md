@@ -66,7 +66,7 @@ harbor run -d accelerate-bench/accelerate-bench@v1.1 \
   -a claude-code -m anthropic/MODEL_ID --ak reasoning_effort=high -n 1
 ```
 
-Add `-i hpcg-multigrid-pcg` to run a single task. ICON is not on Harbor Hub because its two grid files have to be downloaded from their official source; the full release below includes it.
+`-n 1` runs one task at a time. Each task gives the agent 4 or 8 CPUs and up to 32 GiB of memory and runs a public-test service next to it, so raise `-n` only if the host has room for several tasks at once. Add `-i hpcg-multigrid-pcg` to run a single task. ICON is not on Harbor Hub because its two grid files have to be downloaded from their official source; the full release below includes it.
 
 ### Full release from Hugging Face
 

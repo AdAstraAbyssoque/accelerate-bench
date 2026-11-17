@@ -6,7 +6,7 @@
 
 [![Website](https://img.shields.io/badge/Website-acceleratebench.com-2f66b0)](https://acceleratebench.com)
 [![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
-[![Paper](https://img.shields.io/badge/Paper-PDF-b31b1b)](https://acceleratebench.com/assets/accelerate-bench.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2611.20882-b31b1b)](https://arxiv.org/abs/2611.20882)
 [![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
 [![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEViYmLZ2dmTk5M3NzcAAAAAAAAAAAAXFxcAAAAAAADm5ua5ubkAAAAAAAAAAAAnJycAAAAAAAAAAAAAAAAAAABwY2aBAAAAEHRSTlP%2F%2F%2F%2F%2FXP4A%2F4vP%2F%2F8varL%2F%2BqIUWgAAAa9JREFUeNqtl4uyqyAMRXfEXF4i%2F%2F%2B3J6C3vq2SZmpnVFgkG4QE%2Fy5s6N3ouZofXT9ctcN5bzf3Xcy74TEgHXrPjPQI4PjG3FdA4i%2BWbgGD56%2Fmh2tA4keWrgCOH5o7B4z82MYzwIv%2BawKa%2Bq8IeBv%2FXge80v9kLibAwA02rAC%2BBeAXQOImSx8AN9p%2FgGsFuBnArHABzQrMKqBxCj4TgbY1sKwFtEs4yQhNBCUGqCKQGNDrAD2cDuCw2Ug6e2gB3G8sWGtoKR9adHSv4oZvQ64DWkBcMYYNGNHCTM%2Fkz%2BS9SztA7CiKIzEGa2Po5IcQIwknEBEbeUCEa4C8K2HI8LGTK5aByTKISy%2BSZwFs7zyQl8FI3LE0rkOhUALKG%2BFw2Ku010CaWIRs4xZgPgDzANB1k7uxAkoIod7XEA4e%2BAMg56JlJyKSIEBVRFNFRCSKeTuNm4WUp8uiCGlyNpatLXfLNBqzW0jqpaz%2BmNSfs3pD0W9p6k1Vva3rDxb10aY%2FXNXHuz7BUKc4%2BiRLnebpE019qqtPtvXpvr7g0Jc8%2BqJLX%2Fb9oPD8Qen7g%2BL7Vfn%2FBx9GVrPGBCJaAAAAAElFTkSuQmCC)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
 [![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
@@ -202,7 +202,10 @@ The release carries one release-level and 32 task-level contamination markers ([
   title  = {Accelerate Bench: Evaluating Agents for Application-Level Program Optimization},
   author = {Liu, Bowen and Li, Yuhan and Chen, Nuo and Luo, Weile and Peng, Miao and Zhang, Qintong and Zhang, Qifan and Li, Jia and Gao, Ziqi and Huang, Lydell},
   year   = {2026},
-  url    = {https://acceleratebench.com/}
+  eprint = {2611.20882},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url    = {https://arxiv.org/abs/2611.20882}
 }
 ```
 

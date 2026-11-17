@@ -1,10 +1,9 @@
-# Citation metadata for the staged, unpublished release.
+# Citation metadata for Accelerate Bench and its public arXiv preprint.
 # The software-level license is deliberately omitted: Apache-2.0 covers
 # original project code only; third-party components retain their own terms.
 # The CC-BY-4.0 field below applies only to preferred-citation (the manuscript).
 cff-version: 1.2.0
-message: If you use Accelerate Bench, please cite the manuscript described in preferred-citation. This
-  is an unpublished manuscript citation; no arXiv identifier, DOI or release version has been assigned.
+message: If you use Accelerate Bench, please cite the arXiv preprint described in preferred-citation.
 type: software
 title: 'Accelerate Bench: Evaluating Agents for Application-Level Program Optimization'
 authors:
@@ -50,7 +49,7 @@ contact:
   given-names: Nuo
   email: chennuo26@gmail.com
 preferred-citation:
-  type: unpublished
+  type: report
   title: 'Accelerate Bench: Evaluating Agents for Application-Level Program Optimization'
   authors:
   - family-names: Liu
@@ -86,8 +85,14 @@ preferred-citation:
   - family-names: Huang
     given-names: Lydell
     affiliation: Tencent Hy Team
-  url: https://acceleratebench.com/
+  url: https://arxiv.org/abs/2611.20882
   license: CC-BY-4.0
-  notes: Unpublished manuscript; arXiv submission is on hold. Yuhan Li is Project Lead; Nuo Chen is the
-    corresponding author. Bowen Liu is an additional contact. The manuscript license does not apply to
-    benchmark code or third-party components.
+  year: 2026
+  date-published: 2026-11-16
+  institution:
+    name: arXiv
+  number: "arXiv:2611.20882"
+  identifiers:
+  - type: other
+    value: "arXiv:2611.20882"
+  notes: Yuhan Li is Project Lead; Nuo Chen is the corresponding author. Bowen Liu is an additional contact. The manuscript license does not apply to benchmark code or third-party components.

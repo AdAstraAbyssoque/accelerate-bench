@@ -4,14 +4,24 @@
   <img src="assets/accelerate-bench-banner.png" alt="Accelerate Bench" width="900">
 </p>
 
-[![Website](https://img.shields.io/badge/Website-acceleratebench.com-2f66b0)](https://acceleratebench.com)
-[![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
-[![arXiv](https://img.shields.io/badge/arXiv-2611.20882-b31b1b)](https://arxiv.org/abs/2611.20882)
-[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
-[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEViYmLZ2dmTk5M3NzcAAAAAAAAAAAAXFxcAAAAAAADm5ua5ubkAAAAAAAAAAAAnJycAAAAAAAAAAAAAAAAAAABwY2aBAAAAEHRSTlP%2F%2F%2F%2F%2FXP4A%2F4vP%2F%2F8varL%2F%2BqIUWgAAAa9JREFUeNqtl4uyqyAMRXfEXF4i%2F%2F%2B3J6C3vq2SZmpnVFgkG4QE%2Fy5s6N3ouZofXT9ctcN5bzf3Xcy74TEgHXrPjPQI4PjG3FdA4i%2BWbgGD56%2Fmh2tA4keWrgCOH5o7B4z82MYzwIv%2BawKa%2Bq8IeBv%2FXge80v9kLibAwA02rAC%2BBeAXQOImSx8AN9p%2FgGsFuBnArHABzQrMKqBxCj4TgbY1sKwFtEs4yQhNBCUGqCKQGNDrAD2cDuCw2Ug6e2gB3G8sWGtoKR9adHSv4oZvQ64DWkBcMYYNGNHCTM%2Fkz%2BS9SztA7CiKIzEGa2Po5IcQIwknEBEbeUCEa4C8K2HI8LGTK5aByTKISy%2BSZwFs7zyQl8FI3LE0rkOhUALKG%2BFw2Ku010CaWIRs4xZgPgDzANB1k7uxAkoIod7XEA4e%2BAMg56JlJyKSIEBVRFNFRCSKeTuNm4WUp8uiCGlyNpatLXfLNBqzW0jqpaz%2BmNSfs3pD0W9p6k1Vva3rDxb10aY%2FXNXHuz7BUKc4%2BiRLnebpE019qqtPtvXpvr7g0Jc8%2BqJLX%2Fb9oPD8Qen7g%2BL7Vfn%2FBx9GVrPGBCJaAAAAAElFTkSuQmCC)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
-[![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
+</div>
 
-**Accelerate Bench** asks whether coding agents can make whole scientific applications faster without breaking them. Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
+A long-horizon coding agent benchmark for speeding up scientific applications
+
+Accelerate Bench has 32 CPU tasks adapted from scientific applications and six supercomputing competitions. Each gives a coding agent a working program, a fixed workload and rules on what it may change. Within an eight-hour budget, the agent can measure where time goes, change code, build or runtime settings, and test candidates with public tests. A hidden verifier then checks the final program on private inputs and times the end-to-end workflow. On version 1.1, most programs from 16 coding agents stayed correct; what separated the agents was how much faster they made the applications.
+
+[Website](https://acceleratebench.com/) · [Paper (arXiv)](https://arxiv.org/abs/2611.20882) · [Hugging Face dataset](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench) · [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
+
+## Key findings
+
+- **Correctness alone does not separate the agents; speed does.** On v1.1, each of the 16 agents was correct on 26 to 32 of the 32 tasks, yet Score@1 ranged from 25.5% to 67.4%. GPT-6.1 Terra with Codex was correct on all 32 tasks and scored 37.9%; Kimi K3 with Claude Code was correct on 28 and scored 42.5%. (§4, Table 1)
+- **The two leading agents reach large speedups far more often.** Claude Sonnet 5.5 and Claude Opus 5.5, both with Claude Code, were at least 2× faster on 22 or more of the 32 tasks. The other fourteen agents reached 2× on 8 to 17 tasks, and 125 of their 412 correct programs were less than 1.25× faster than the baseline. (v1.1; §4, Fig. 3)
+- **Build and runtime settings can change speed several-fold, yet the analyzed agents rarely tuned them.** In 476 labeled v1.0 runs from five agents, 225 changed how the computation is done, including reusing computed results, while compiler and build tuning appeared in only 40. Replaying the same GROMACS source code under four build and runtime settings gave correct results in all four, at 0.29× to 2.12× the speed of a fixed reference. (v1.0 analysis; §5, App. L.1)
+- **What a code change is worth can depend on other changes.** In one QiboTN program, deferring the import of tensor libraries made it only 1.01× faster on its own, but 6.3–6.4× faster once another change sent more circuits to a fast exact simulator. (v1.0 analysis; §5, App. L.2)
+
+<div align="center">
+
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard) [![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
 
 <p align="center">
   <img src="assets/accelerate-bench-overview.png" alt="Commit-derived tasks compared with Accelerate Bench's workload-defined tasks" width="900">
@@ -20,6 +30,8 @@
 <sub>Commit-derived tasks (left, as in GSO) start from one known performance commit and measure the agent's patch against it. Accelerate Bench tasks (right) fix the workload and the computation that must be preserved; the agent decides where and how to optimize, and a separate verifier scores the final program.</sub>
 
 </div>
+
+Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
 
 - **32 tasks** from 8 application areas, adapted from scientific codes and supercomputing competitions
 - **Harbor task packages**: each task is a directory with `task.toml`, `instruction.md`, `environment/` and `tests/`; 31 of them are on [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench) and run with one `harbor run` command (see [Quickstart](#quickstart))

@@ -6,9 +6,9 @@
 
 </div>
 
-A long-horizon coding agent benchmark for speeding up scientific applications
+A long-horizon coding agent benchmark for speeding up scientific computing applications
 
-Accelerate Bench has 32 CPU tasks adapted from scientific applications and six supercomputing competitions. Each gives a coding agent a working program, a fixed workload and rules on what it may change. Within an eight-hour budget, the agent can measure where time goes, change code, build or runtime settings, and test candidates with public tests. A hidden verifier then checks the final program on private inputs and times the end-to-end workflow. On version 1.1, most programs from 16 coding agents stayed correct; what separated the agents was how much faster they made the applications.
+Accelerate Bench has 32 CPU tasks from scientific computing, adapted from applications such as GROMACS, LAMMPS, Quantum ESPRESSO, OpenFOAM and the ICON weather and climate model, and from six supercomputing competitions. They span eight areas, including molecular simulation, atmosphere and ocean modeling, bioinformatics and quantum circuits. Each gives a coding agent a working program, a fixed workload and rules on what it may change. Within an eight-hour budget, the agent can measure where time goes, change code, build or runtime settings, and test candidates with public tests. A hidden verifier then checks the final program on private inputs and times the end-to-end workflow. On version 1.1, most programs from 16 coding agents stayed correct; what separated the agents was how much faster they made the applications.
 
 [Website](https://acceleratebench.com/) · [Paper (arXiv)](https://arxiv.org/abs/2611.20882) · [Hugging Face dataset](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench) · [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
 

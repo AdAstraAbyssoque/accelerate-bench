@@ -4,13 +4,18 @@
   <img src="assets/accelerate-bench-banner.png" alt="Accelerate Bench" width="900">
 </p>
 
+[![Website](https://img.shields.io/badge/Website-acceleratebench.com-2f66b0)](https://acceleratebench.com)
+[![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard)
+[![arXiv](https://img.shields.io/badge/arXiv-2611.20882-b31b1b)](https://arxiv.org/abs/2611.20882)
+[![Hugging Face](https://img.shields.io/badge/Hugging%20Face-task%20packages-FFD21E?logo=huggingface&logoColor=000)](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)
+[![Harbor Hub](https://img.shields.io/badge/Harbor%20Hub-accelerate--bench-172b45?logo=data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEViYmLZ2dmTk5M3NzcAAAAAAAAAAAAXFxcAAAAAAADm5ua5ubkAAAAAAAAAAAAnJycAAAAAAAAAAAAAAAAAAABwY2aBAAAAEHRSTlP%2F%2F%2F%2F%2FXP4A%2F4vP%2F%2F8varL%2F%2BqIUWgAAAa9JREFUeNqtl4uyqyAMRXfEXF4i%2F%2F%2B3J6C3vq2SZmpnVFgkG4QE%2Fy5s6N3ouZofXT9ctcN5bzf3Xcy74TEgHXrPjPQI4PjG3FdA4i%2BWbgGD56%2Fmh2tA4keWrgCOH5o7B4z82MYzwIv%2BawKa%2Bq8IeBv%2FXge80v9kLibAwA02rAC%2BBeAXQOImSx8AN9p%2FgGsFuBnArHABzQrMKqBxCj4TgbY1sKwFtEs4yQhNBCUGqCKQGNDrAD2cDuCw2Ug6e2gB3G8sWGtoKR9adHSv4oZvQ64DWkBcMYYNGNHCTM%2Fkz%2BS9SztA7CiKIzEGa2Po5IcQIwknEBEbeUCEa4C8K2HI8LGTK5aByTKISy%2BSZwFs7zyQl8FI3LE0rkOhUALKG%2BFw2Ku010CaWIRs4xZgPgDzANB1k7uxAkoIod7XEA4e%2BAMg56JlJyKSIEBVRFNFRCSKeTuNm4WUp8uiCGlyNpatLXfLNBqzW0jqpaz%2BmNSfs3pD0W9p6k1Vva3rDxb10aY%2FXNXHuz7BUKc4%2BiRLnebpE019qqtPtvXpvr7g0Jc8%2BqJLX%2Fb9oPD8Qen7g%2BL7Vfn%2FBx9GVrPGBCJaAAAAAElFTkSuQmCC)](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
+[![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
+
 </div>
 
-A long-horizon coding agent benchmark for speeding up scientific computing applications
+**A long-horizon coding agent benchmark for speeding up scientific computing applications**
 
 Accelerate Bench has 32 CPU tasks from scientific computing, adapted from applications such as GROMACS, LAMMPS, Quantum ESPRESSO, OpenFOAM and the ICON weather and climate model, and from six supercomputing competitions. They span eight areas, including molecular simulation, atmosphere and ocean modeling, bioinformatics and quantum circuits. Each gives a coding agent a working program, a fixed workload and rules on what it may change. Within an eight-hour budget, the agent can measure where time goes, change code, build or runtime settings, and test candidates with public tests. A hidden verifier then checks the final program on private inputs and times the end-to-end workflow. On version 1.1, most programs from 16 coding agents stayed correct; what separated the agents was how much faster they made the applications.
-
-[Website](https://acceleratebench.com/) · [Paper (arXiv)](https://arxiv.org/abs/2611.20882) · [Hugging Face dataset](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench) · [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)
 
 ## Key findings
 

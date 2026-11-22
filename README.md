@@ -26,8 +26,6 @@ Accelerate Bench has 32 CPU tasks from scientific computing, adapted from applic
 
 <div align="center">
 
-[![Leaderboard](https://img.shields.io/badge/Leaderboard-v1.1-307f83)](https://acceleratebench.com/#leaderboard) [![License](https://img.shields.io/badge/Code-Apache--2.0-555555)](LICENSE)
-
 <p align="center">
   <img src="assets/accelerate-bench-overview.png" alt="Commit-derived tasks compared with Accelerate Bench's workload-defined tasks" width="900">
 </p>
@@ -35,8 +33,6 @@ Accelerate Bench has 32 CPU tasks from scientific computing, adapted from applic
 <sub>Commit-derived tasks (left, as in GSO) start from one known performance commit and measure the agent's patch against it. Accelerate Bench tasks (right) fix the workload and the computation that must be preserved; the agent decides where and how to optimize, and a separate verifier scores the final program.</sub>
 
 </div>
-
-Each task gives the agent a working application, such as GROMACS, OpenFOAM or Quantum ESPRESSO, with a fixed workload and a CPU and memory budget. The agent has eight hours to make the whole program faster; a separate private verifier then rebuilds the final program, checks it on hidden inputs and times it against the unmodified program.
 
 - **32 tasks** from 8 application areas, adapted from scientific codes and supercomputing competitions
 - **Harbor task packages**: each task is a directory with `task.toml`, `instruction.md`, `environment/` and `tests/`; 31 of them are on [Harbor Hub](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench) and run with one `harbor run` command (see [Quickstart](#quickstart))

@@ -84,7 +84,7 @@ harbor run -d accelerate-bench/accelerate-bench@v1.1 \
 
 The full release has all 32 tasks in one archive, with a manifest of every file's SHA-256.
 
-**1. Request access.** Open the [dataset page](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench), sign in and describe your institution and planned evaluation. Approval is manual. Evaluation, reproduction, auditing and teaching are supported; please do not train on the tasks or redistribute them.
+**1. Request access.** Open the [dataset page](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench), sign in and describe your institution and planned evaluation. Access is granted automatically once you submit the form. Evaluation, reproduction, auditing and teaching are supported; please do not train on the tasks or redistribute them.
 
 **2. Download and verify the tasks** (about 2.56 GB):
 
@@ -227,4 +227,4 @@ Contact: Bowen Liu ([bliu690@connect.hkust-gz.edu.cn](mailto:bliu690@connect.hku
 
 Accelerate Bench 评测编码 agent 能否在保持结果正确的前提下，让完整的科学计算应用跑得更快。发布版本为论文评测所用的 v1.1，共 32 道题，以 Harbor 任务包的形式发布。
 
-最快的上手方式是 Harbor Hub：除 ICON 外的 31 道题已发布为 Harbor 数据集 [`accelerate-bench/accelerate-bench`](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)，无需申请，`harbor run -d accelerate-bench/accelerate-bench@v1.1 -a claude-code -m anthropic/模型名` 即可运行。完整的 32 题发布包需在[数据集页面](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)申请访问，用 `scripts/download_data.py` 下载并逐文件校验。复现论文设置（绑定物理核）请用 `public-release/native_run.py`。每题得分为 r = C × max(0, 1 − T_候选 / T_基线)，Score@1 为 32 题平均。题目仅供评测，请勿用于训练。
+最快的上手方式是 Harbor Hub：除 ICON 外的 31 道题已发布为 Harbor 数据集 [`accelerate-bench/accelerate-bench`](https://hub.harborframework.com/datasets/accelerate-bench/accelerate-bench)，无需申请，`harbor run -d accelerate-bench/accelerate-bench@v1.1 -a claude-code -m anthropic/模型名` 即可运行。完整的 32 题发布包需在[数据集页面](https://huggingface.co/datasets/AdAstraAbyssoque/accelerate-bench)登录并提交表单，访问权限会自动开通。用 `scripts/download_data.py` 下载并逐文件校验。复现论文设置（绑定物理核）请用 `public-release/native_run.py`。每题得分为 r = C × max(0, 1 − T_候选 / T_基线)，Score@1 为 32 题平均。题目仅供评测，请勿用于训练。
